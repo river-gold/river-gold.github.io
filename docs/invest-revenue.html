@@ -1,0 +1,223 @@
+<!doctype html>
+<!--<html lang="ko_KR">-->
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="content-security-policy" content=""><title>예적금(투자) 수익 계산기</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-02e22350.css">
+	<link rel="modulepreload" href="/_app/start-fc7a0d67.js">
+	<link rel="modulepreload" href="/_app/chunks/index-cf172771.js">
+	<link rel="modulepreload" href="/_app/chunks/index-d6a33c38.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c1910f54.js">
+	<link rel="modulepreload" href="/_app/pages/invest-revenue.svelte-1b45e398.js">
+	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
+	<link rel="modulepreload" href="/_app/chunks/dayjs.min-099b3022.js">
+	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
+	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
+</head>
+<body>
+	
+
+
+
+
+<main>
+
+<div id="app"><div class="title"><h1>예적금(투자) 수익 계산기</h1></div>
+    <div class="table"><form><div class="row"><div class="cell label"><label for="initAmount">초기 투자금</label></div>
+                <div class="cell"></div>
+                <div class="cell"><input type="number" name="initAmount" id="initAmount" value="0"> 만원
+                </div></div>
+            <div class="row"><div class="cell label"><label for="roundAmount">투자 횟수</label></div>
+                <div class="cell right"></div>
+                <div class="cell"><input type="number" name="round" id="round" value="20"> 회
+                </div></div>
+            <div class="row"><div class="cell label"><label for="roundAmount">매회 투자금</label></div>
+                <div class="cell right"><select name="roundType" id="roundType"><option value="yearly">매년</option><option value="monthly">매월</option><option value="daily">매일</option></select></div>
+                <div class="cell"><input type="number" name="roundAmount" id="roundAmount" value="100"> 만원
+                </div></div>
+            <div class="row"><div class="cell label"><label for="interestRate">수익률</label></div>
+                <div class="cell right"><select name="interestExchangeType" id="interestExchangeType"><option value="yearly">연간</option><option value="monthly">월간</option><option value="daily">일간</option></select></div>
+                <div class="cell"><input type="number" name="interestRate" id="interestRate" value="5"> %
+                </div></div>
+            <div class="row"><div class="cell label"><label for="interestRateType">이자 적용 방식</label></div>
+                <div class="cell right"><select name="interestRateType" id="interestRateType"><option value="yearly_compound">연복리</option><option value="monthly_compound">월복리</option><option value="daily_compound">일복리</option><option value="simple">단리</option></select></div></div></form></div>
+    <br>
+    <div id="results"><div class="table"><div class="row"><div class="cell">총액 : 3,471.92 만원
+                </div></div></div>
+        <br>
+        <div class="table"><div class="row thead"><div class="cell">회차</div>
+                <div class="cell">원금</div>
+                <div class="cell">이자</div>
+                <div class="cell">누적 이자</div>
+                <div class="cell">잔액</div>
+                <div class="cell">수익률</div>
+                <div class="cell">누적 수익률</div></div>
+            <div class="row tbody"><div class="cell">1</div>
+                        <div class="cell">100</div>
+                        <div class="cell">5</div>
+                        <div class="cell">5</div>
+                        <div class="cell">105</div>
+                        <div class="cell">5</div>
+                        <div class="cell">5</div>
+                    </div><div class="row tbody"><div class="cell">2</div>
+                        <div class="cell">200</div>
+                        <div class="cell">10.25</div>
+                        <div class="cell">15.25</div>
+                        <div class="cell">215.25</div>
+                        <div class="cell">5.12</div>
+                        <div class="cell">7.62</div>
+                    </div><div class="row tbody"><div class="cell">3</div>
+                        <div class="cell">300</div>
+                        <div class="cell">15.76</div>
+                        <div class="cell">31.01</div>
+                        <div class="cell">331.01</div>
+                        <div class="cell">5.25</div>
+                        <div class="cell">10.33</div>
+                    </div><div class="row tbody"><div class="cell">4</div>
+                        <div class="cell">400</div>
+                        <div class="cell">21.55</div>
+                        <div class="cell">52.56</div>
+                        <div class="cell">452.56</div>
+                        <div class="cell">5.38</div>
+                        <div class="cell">13.14</div>
+                    </div><div class="row tbody"><div class="cell">5</div>
+                        <div class="cell">500</div>
+                        <div class="cell">27.62</div>
+                        <div class="cell">80.19</div>
+                        <div class="cell">580.19</div>
+                        <div class="cell">5.52</div>
+                        <div class="cell">16.03</div>
+                    </div><div class="row tbody"><div class="cell">6</div>
+                        <div class="cell">600</div>
+                        <div class="cell">34</div>
+                        <div class="cell">114.2</div>
+                        <div class="cell">714.2</div>
+                        <div class="cell">5.66</div>
+                        <div class="cell">19.03</div>
+                    </div><div class="row tbody"><div class="cell">7</div>
+                        <div class="cell">700</div>
+                        <div class="cell">40.71</div>
+                        <div class="cell">154.91</div>
+                        <div class="cell">854.91</div>
+                        <div class="cell">5.81</div>
+                        <div class="cell">22.13</div>
+                    </div><div class="row tbody"><div class="cell">8</div>
+                        <div class="cell">800</div>
+                        <div class="cell">47.74</div>
+                        <div class="cell">202.65</div>
+                        <div class="cell">1,002.65</div>
+                        <div class="cell">5.96</div>
+                        <div class="cell">25.33</div>
+                    </div><div class="row tbody"><div class="cell">9</div>
+                        <div class="cell">900</div>
+                        <div class="cell">55.13</div>
+                        <div class="cell">257.78</div>
+                        <div class="cell">1,157.78</div>
+                        <div class="cell">6.12</div>
+                        <div class="cell">28.64</div>
+                    </div><div class="row tbody"><div class="cell">10</div>
+                        <div class="cell">1,000</div>
+                        <div class="cell">62.88</div>
+                        <div class="cell">320.67</div>
+                        <div class="cell">1,320.67</div>
+                        <div class="cell">6.28</div>
+                        <div class="cell">32.06</div>
+                    </div><div class="row tbody"><div class="cell">11</div>
+                        <div class="cell">1,100</div>
+                        <div class="cell">71.03</div>
+                        <div class="cell">391.71</div>
+                        <div class="cell">1,491.71</div>
+                        <div class="cell">6.45</div>
+                        <div class="cell">35.61</div>
+                    </div><div class="row tbody"><div class="cell">12</div>
+                        <div class="cell">1,200</div>
+                        <div class="cell">79.58</div>
+                        <div class="cell">471.29</div>
+                        <div class="cell">1,671.29</div>
+                        <div class="cell">6.63</div>
+                        <div class="cell">39.27</div>
+                    </div><div class="row tbody"><div class="cell">13</div>
+                        <div class="cell">1,300</div>
+                        <div class="cell">88.56</div>
+                        <div class="cell">559.86</div>
+                        <div class="cell">1,859.86</div>
+                        <div class="cell">6.81</div>
+                        <div class="cell">43.06</div>
+                    </div><div class="row tbody"><div class="cell">14</div>
+                        <div class="cell">1,400</div>
+                        <div class="cell">97.99</div>
+                        <div class="cell">657.85</div>
+                        <div class="cell">2,057.85</div>
+                        <div class="cell">6.99</div>
+                        <div class="cell">46.98</div>
+                    </div><div class="row tbody"><div class="cell">15</div>
+                        <div class="cell">1,500</div>
+                        <div class="cell">107.89</div>
+                        <div class="cell">765.74</div>
+                        <div class="cell">2,265.74</div>
+                        <div class="cell">7.19</div>
+                        <div class="cell">51.04</div>
+                    </div><div class="row tbody"><div class="cell">16</div>
+                        <div class="cell">1,600</div>
+                        <div class="cell">118.28</div>
+                        <div class="cell">884.03</div>
+                        <div class="cell">2,484.03</div>
+                        <div class="cell">7.39</div>
+                        <div class="cell">55.25</div>
+                    </div><div class="row tbody"><div class="cell">17</div>
+                        <div class="cell">1,700</div>
+                        <div class="cell">129.2</div>
+                        <div class="cell">1,013.23</div>
+                        <div class="cell">2,713.23</div>
+                        <div class="cell">7.6</div>
+                        <div class="cell">59.6</div>
+                    </div><div class="row tbody"><div class="cell">18</div>
+                        <div class="cell">1,800</div>
+                        <div class="cell">140.66</div>
+                        <div class="cell">1,153.9</div>
+                        <div class="cell">2,953.9</div>
+                        <div class="cell">7.81</div>
+                        <div class="cell">64.1</div>
+                    </div><div class="row tbody"><div class="cell">19</div>
+                        <div class="cell">1,900</div>
+                        <div class="cell">152.69</div>
+                        <div class="cell">1,306.59</div>
+                        <div class="cell">3,206.59</div>
+                        <div class="cell">8.03</div>
+                        <div class="cell">68.76</div>
+                    </div><div class="row tbody"><div class="cell">20</div>
+                        <div class="cell">2,000</div>
+                        <div class="cell">165.32</div>
+                        <div class="cell">1,471.92</div>
+                        <div class="cell">3,471.92</div>
+                        <div class="cell">8.26</div>
+                        <div class="cell">73.59</div>
+                    </div></div></div></div></main>
+
+<footer></footer>
+
+
+		<script type="module" data-sveltekit-hydrate="6t8o7a">
+		import { start } from "/_app/start-fc7a0d67.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="6t8o7a"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c1910f54.js"),
+						import("/_app/pages/invest-revenue.svelte-1b45e398.js")
+				],
+				params: {},
+				routeId: "invest-revenue"
+			}
+		});
+	</script>
+</body>
+</html>

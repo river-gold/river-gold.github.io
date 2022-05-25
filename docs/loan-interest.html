@@ -1,0 +1,326 @@
+<!doctype html>
+<!--<html lang="ko_KR">-->
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="content-security-policy" content=""><title>대출 원리금 계산기</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-02e22350.css">
+	<link rel="modulepreload" href="/_app/start-fc7a0d67.js">
+	<link rel="modulepreload" href="/_app/chunks/index-cf172771.js">
+	<link rel="modulepreload" href="/_app/chunks/index-d6a33c38.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c1910f54.js">
+	<link rel="modulepreload" href="/_app/pages/loan-interest.svelte-93b39989.js">
+	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
+	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
+	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
+</head>
+<body>
+	
+
+
+
+
+<main>
+
+<div id="app"><div class="title"><h1>대출 원리금 계산기</h1></div>
+    <div class="table"><form>
+            
+            
+            
+            <div class="row"><div class="cell label"><label for="principal">대출 금액</label></div>
+                <div class="cell"><input type="number" name="principal" id="principal" value="10000">
+                    만원
+                </div></div>
+            <div class="row"><div class="cell label"><label for="interestRate">금리</label></div>
+                <div class="cell"><input type="number" name="interestRate" id="interestRate" value="5">
+                    %
+                </div></div>
+            <div class="row"><div class="cell label"><label for="repaymentType">상환방식</label></div>
+                <div class="cell"><select name="" id="repaymentType"><option value="equalPrincipalAndInterest">원리금균등</option><option value="equalPrincipal">원금균등</option><option value="grace">거치식</option></select></div></div>
+            <div class="row"><div class="cell label"><label for="repaymentPeriod">상환기간</label></div>
+                <div class="cell"><input type="number" name="repaymentPeriod" id="repaymentPeriod" value="24">
+                    개월
+                </div></div>
+            <div class="row"><div class="cell label"><label for="gracePeriod">거치기간</label></div>
+                <div class="cell"><input type="number" name="gracePeriod" id="gracePeriod" value="6">
+                    개월
+                </div></div></form></div>
+    <br>
+    <div id="results"><div class="table"><div class="row thead"><div class="cell">회차</div>
+                <div class="cell">대출잔액</div>
+                <div class="cell">상환금액</div>
+                <div class="cell">총 상환금액</div>
+                <div class="cell">이자</div>
+                <div class="cell">총 이자</div>
+                <div class="cell">상환원금</div>
+                <div class="cell">총 상환원금</div></div>
+            
+            <div class="row tbody"><div class="cell">1</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">2</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">83.33</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">83.33</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">3</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">125</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">125</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">4</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">166.66</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">166.66</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">5</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">208.33</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">208.33</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">6</div>
+                    <div class="cell">10,000</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">250</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">250</div>
+                    <div class="cell">0</div>
+                    <div class="cell">0</div>
+                </div><div class="row tbody"><div class="cell">7</div>
+                    <div class="cell">9,602.95</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">688.71</div>
+                    <div class="cell">41.66</div>
+                    <div class="cell">291.66</div>
+                    <div class="cell">397.04</div>
+                    <div class="cell">397.04</div>
+                </div><div class="row tbody"><div class="cell">8</div>
+                    <div class="cell">9,204.25</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">1,127.42</div>
+                    <div class="cell">40.01</div>
+                    <div class="cell">331.67</div>
+                    <div class="cell">398.7</div>
+                    <div class="cell">795.74</div>
+                </div><div class="row tbody"><div class="cell">9</div>
+                    <div class="cell">8,803.88</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">1,566.14</div>
+                    <div class="cell">38.35</div>
+                    <div class="cell">370.03</div>
+                    <div class="cell">400.36</div>
+                    <div class="cell">1,196.11</div>
+                </div><div class="row tbody"><div class="cell">10</div>
+                    <div class="cell">8,401.85</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">2,004.85</div>
+                    <div class="cell">36.68</div>
+                    <div class="cell">406.71</div>
+                    <div class="cell">402.03</div>
+                    <div class="cell">1,598.14</div>
+                </div><div class="row tbody"><div class="cell">11</div>
+                    <div class="cell">7,998.15</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">2,443.56</div>
+                    <div class="cell">35</div>
+                    <div class="cell">441.72</div>
+                    <div class="cell">403.7</div>
+                    <div class="cell">2,001.84</div>
+                </div><div class="row tbody"><div class="cell">12</div>
+                    <div class="cell">7,592.76</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">2,882.28</div>
+                    <div class="cell">33.32</div>
+                    <div class="cell">475.04</div>
+                    <div class="cell">405.38</div>
+                    <div class="cell">2,407.23</div>
+                </div><div class="row tbody"><div class="cell">13</div>
+                    <div class="cell">7,185.68</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">3,320.99</div>
+                    <div class="cell">31.63</div>
+                    <div class="cell">506.68</div>
+                    <div class="cell">407.07</div>
+                    <div class="cell">2,814.31</div>
+                </div><div class="row tbody"><div class="cell">14</div>
+                    <div class="cell">6,776.91</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">3,759.71</div>
+                    <div class="cell">29.94</div>
+                    <div class="cell">536.62</div>
+                    <div class="cell">408.77</div>
+                    <div class="cell">3,223.08</div>
+                </div><div class="row tbody"><div class="cell">15</div>
+                    <div class="cell">6,366.43</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">4,198.42</div>
+                    <div class="cell">28.23</div>
+                    <div class="cell">564.86</div>
+                    <div class="cell">410.47</div>
+                    <div class="cell">3,633.56</div>
+                </div><div class="row tbody"><div class="cell">16</div>
+                    <div class="cell">5,954.24</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">4,637.13</div>
+                    <div class="cell">26.52</div>
+                    <div class="cell">591.38</div>
+                    <div class="cell">412.18</div>
+                    <div class="cell">4,045.75</div>
+                </div><div class="row tbody"><div class="cell">17</div>
+                    <div class="cell">5,540.34</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">5,075.85</div>
+                    <div class="cell">24.8</div>
+                    <div class="cell">616.19</div>
+                    <div class="cell">413.9</div>
+                    <div class="cell">4,459.65</div>
+                </div><div class="row tbody"><div class="cell">18</div>
+                    <div class="cell">5,124.71</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">5,514.56</div>
+                    <div class="cell">23.08</div>
+                    <div class="cell">639.28</div>
+                    <div class="cell">415.62</div>
+                    <div class="cell">4,875.28</div>
+                </div><div class="row tbody"><div class="cell">19</div>
+                    <div class="cell">4,707.35</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">5,953.28</div>
+                    <div class="cell">21.35</div>
+                    <div class="cell">660.63</div>
+                    <div class="cell">417.36</div>
+                    <div class="cell">5,292.64</div>
+                </div><div class="row tbody"><div class="cell">20</div>
+                    <div class="cell">4,288.25</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">6,391.99</div>
+                    <div class="cell">19.61</div>
+                    <div class="cell">680.24</div>
+                    <div class="cell">419.09</div>
+                    <div class="cell">5,711.74</div>
+                </div><div class="row tbody"><div class="cell">21</div>
+                    <div class="cell">3,867.4</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">6,830.7</div>
+                    <div class="cell">17.86</div>
+                    <div class="cell">698.11</div>
+                    <div class="cell">420.84</div>
+                    <div class="cell">6,132.59</div>
+                </div><div class="row tbody"><div class="cell">22</div>
+                    <div class="cell">3,444.8</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">7,269.42</div>
+                    <div class="cell">16.11</div>
+                    <div class="cell">714.23</div>
+                    <div class="cell">422.59</div>
+                    <div class="cell">6,555.19</div>
+                </div><div class="row tbody"><div class="cell">23</div>
+                    <div class="cell">3,020.44</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">7,708.13</div>
+                    <div class="cell">14.35</div>
+                    <div class="cell">728.58</div>
+                    <div class="cell">424.36</div>
+                    <div class="cell">6,979.55</div>
+                </div><div class="row tbody"><div class="cell">24</div>
+                    <div class="cell">2,594.31</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">8,146.85</div>
+                    <div class="cell">12.58</div>
+                    <div class="cell">741.16</div>
+                    <div class="cell">426.12</div>
+                    <div class="cell">7,405.68</div>
+                </div><div class="row tbody"><div class="cell">25</div>
+                    <div class="cell">2,166.41</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">8,585.56</div>
+                    <div class="cell">10.8</div>
+                    <div class="cell">751.97</div>
+                    <div class="cell">427.9</div>
+                    <div class="cell">7,833.58</div>
+                </div><div class="row tbody"><div class="cell">26</div>
+                    <div class="cell">1,736.72</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">9,024.27</div>
+                    <div class="cell">9.02</div>
+                    <div class="cell">761</div>
+                    <div class="cell">429.68</div>
+                    <div class="cell">8,263.27</div>
+                </div><div class="row tbody"><div class="cell">27</div>
+                    <div class="cell">1,305.24</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">9,462.99</div>
+                    <div class="cell">7.23</div>
+                    <div class="cell">768.24</div>
+                    <div class="cell">431.47</div>
+                    <div class="cell">8,694.75</div>
+                </div><div class="row tbody"><div class="cell">28</div>
+                    <div class="cell">871.97</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">9,901.7</div>
+                    <div class="cell">5.43</div>
+                    <div class="cell">773.67</div>
+                    <div class="cell">433.27</div>
+                    <div class="cell">9,128.02</div>
+                </div><div class="row tbody"><div class="cell">29</div>
+                    <div class="cell">436.89</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">10,340.41</div>
+                    <div class="cell">3.63</div>
+                    <div class="cell">777.31</div>
+                    <div class="cell">435.08</div>
+                    <div class="cell">9,563.1</div>
+                </div><div class="row tbody"><div class="cell">30</div>
+                    <div class="cell">0</div>
+                    <div class="cell">438.71</div>
+                    <div class="cell">10,779.13</div>
+                    <div class="cell">1.82</div>
+                    <div class="cell">779.13</div>
+                    <div class="cell">436.89</div>
+                    <div class="cell">10,000</div>
+                </div>
+            </div></div></div></main>
+
+<footer></footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1a9o4dc">
+		import { start } from "/_app/start-fc7a0d67.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1a9o4dc"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c1910f54.js"),
+						import("/_app/pages/loan-interest.svelte-93b39989.js")
+				],
+				params: {},
+				routeId: "loan-interest"
+			}
+		});
+	</script>
+</body>
+</html>
