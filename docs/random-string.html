@@ -3,14 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<meta http-equiv="content-security-policy" content=""><title>랜덤 문자열 생성기</title>
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-02e22350.css">
-	<link rel="stylesheet" href="/_app/assets/pages/random-string.svelte-d90c5ae0.css">
-	<link rel="modulepreload" href="/_app/start-aa4133e2.js">
-	<link rel="modulepreload" href="/_app/chunks/index-10c86a67.js">
-	<link rel="modulepreload" href="/_app/chunks/index-8509d97e.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-e67aa629.js">
-	<link rel="modulepreload" href="/_app/pages/random-string.svelte-dff4ad53.js">
+	<meta http-equiv="content-security-policy" content=""><title>랜덤 문자열 생성기</title><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-h65a3y">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a9b283f.css">
+	<link rel="modulepreload" href="/_app/start-4699f2ed.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a43d9cdb.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a2b24a8c.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cca89767.js">
+	<link rel="modulepreload" href="/_app/pages/random-string.svelte-4bf8bdc1.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/clipboard-6d22df92.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
@@ -22,46 +21,41 @@
 
 
 
+
 <main>
 
-<div id="app"><div class="title"><h1>랜덤 문자열 생성기</h1></div>
-    <div class="table"><form>
-            
-            
-            
-            <div class="row"><div class="cell label"><label for="lowerAlphabet">알파벳 소문자</label></div>
-                <div class="cell"><input type="checkbox" name="lowerAlphabet" id="lowerAlphabet" checked>
-                    a-z
-                </div></div>
-            <div class="row"><div class="cell label"><label for="upperAlphabet">알파벳 대문자</label></div>
-                <div class="cell"><input type="checkbox" name="upperAlphabet" id="upperAlphabet" checked>
-                    A-Z
-                </div></div>
-            <div class="row"><div class="cell label"><label for="number">숫자</label></div>
-                <div class="cell"><input type="checkbox" name="number" id="number" checked>
-                    0-9
-                </div></div>
-            <div class="row"><div class="cell label"><label for="other">특수문자, 기타</label></div>
-                <div class="cell"><input type="checkbox" name="other" id="other" checked>
-                    <input type="text" name="otherWords" id="otherWords" value="!@#$%^&amp;*()-=_+`~"></div></div>
-            <div class="row"><div class="cell label"><label for="wordsLength">글자수</label></div>
-                <div class="cell"><input type="number" name="wordsLength" id="wordsLength" value="12"></div></div>
-            <div class="row"><div class="cell label"><label for="duplication">중복허용</label></div>
-                <div class="cell"><input type="checkbox" name="duplication" id="duplication" checked></div></div>
-            <div class="row subtitle"><div class="cell">결과</div>
-                <div class="cell"></div></div>
-            <div><input type="text" name="result" id="result" value="&amp;-j4u#)LcXC8" class="svelte-18xtz91"></div>
-            <div class="button"><input type="button" value="재생성">
-                <input type="button" value="복사" id="copy" data-clipboard-target="#result"></div></form></div>
-</div></main>
+<h1>랜덤 문자열 생성기</h1>
+
+<section id="form"><form><fieldset><label for="duplication"><input type="checkbox" name="duplication" id="duplication" checked>
+                중복허용
+            </label></fieldset>
+        <fieldset><label for="lowerAlphabet"><input type="checkbox" name="lowerAlphabet" id="lowerAlphabet" checked>
+                알파벳 소문자(a-z)
+            </label></fieldset>
+        <fieldset><label for="upperAlphabet"><input type="checkbox" name="upperAlphabet" id="upperAlphabet" checked>
+                알파벳 대문자(A-Z)
+            </label></fieldset>
+        <fieldset><label for="number"><input type="checkbox" name="number" id="number" checked>
+                숫자(0-9)
+            </label></fieldset>
+        <fieldset><label for="other"><input type="checkbox" name="other" id="other" checked>
+                특수문자, 기타
+            </label>
+            <input type="text" name="otherWords" id="otherWords" value="!@#$%^&amp;*()-=_+`~"></fieldset>
+        <fieldset><label for="wordsLength">글자수
+                <input type="number" name="wordsLength" id="wordsLength" value="12"></label></fieldset></form></section>
+<section id="results"><form><label>결과
+            <input type="text" name="result" id="result" value="(IXU5hQOBZ3+"></label>
+        <input type="button" value="복사" id="copy" data-clipboard-target="#result">
+        <input type="button" value="재생성"></form></section></main>
 
 <footer></footer>
 
 
-		<script type="module" data-sveltekit-hydrate="t9wrcs">
-		import { start } from "/_app/start-aa4133e2.js";
+		<script type="module" data-sveltekit-hydrate="8iknzq">
+		import { start } from "/_app/start-4699f2ed.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="t9wrcs"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="8iknzq"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -71,8 +65,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-e67aa629.js"),
-						import("/_app/pages/random-string.svelte-dff4ad53.js")
+					import("/_app/pages/__layout.svelte-cca89767.js"),
+						import("/_app/pages/random-string.svelte-4bf8bdc1.js")
 				],
 				params: {},
 				routeId: "random-string"

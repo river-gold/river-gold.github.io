@@ -3,13 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<meta http-equiv="content-security-policy" content=""><title>대출 원리금 계산기</title>
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-02e22350.css">
-	<link rel="modulepreload" href="/_app/start-aa4133e2.js">
-	<link rel="modulepreload" href="/_app/chunks/index-10c86a67.js">
-	<link rel="modulepreload" href="/_app/chunks/index-8509d97e.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-e67aa629.js">
-	<link rel="modulepreload" href="/_app/pages/loan-interest.svelte-57be955b.js">
+	<meta http-equiv="content-security-policy" content=""><title>대출 원리금 계산기</title><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-h65a3y">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a9b283f.css">
+	<link rel="modulepreload" href="/_app/start-4699f2ed.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a43d9cdb.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a2b24a8c.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cca89767.js">
+	<link rel="modulepreload" href="/_app/pages/loan-interest.svelte-1bd89c99.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
@@ -20,291 +20,281 @@
 
 
 
+
 <main>
 
-<div id="app"><div class="title"><h1>대출 원리금 계산기</h1></div>
-    <div class="table"><form>
-            
-            
-            
-            <div class="row"><div class="cell label"><label for="principal">대출 금액</label></div>
-                <div class="cell"><input type="number" name="principal" id="principal" value="10000">
-                    만원
-                </div></div>
-            <div class="row"><div class="cell label"><label for="interestRate">금리</label></div>
-                <div class="cell"><input type="number" name="interestRate" id="interestRate" value="5">
-                    %
-                </div></div>
-            <div class="row"><div class="cell label"><label for="repaymentType">상환방식</label></div>
-                <div class="cell"><select name="" id="repaymentType"><option value="equalPrincipalAndInterest">원리금균등</option><option value="equalPrincipal">원금균등</option><option value="grace">거치식</option></select></div></div>
-            <div class="row"><div class="cell label"><label for="repaymentPeriod">상환기간</label></div>
-                <div class="cell"><input type="number" name="repaymentPeriod" id="repaymentPeriod" value="24">
-                    개월
-                </div></div>
-            <div class="row"><div class="cell label"><label for="gracePeriod">거치기간</label></div>
-                <div class="cell"><input type="number" name="gracePeriod" id="gracePeriod" value="6">
-                    개월
-                </div></div></form></div>
-    <br>
-    <div id="results"><div class="table"><div class="row thead"><div class="cell">회차</div>
-                <div class="cell">대출잔액</div>
-                <div class="cell">상환금액</div>
-                <div class="cell">총 상환금액</div>
-                <div class="cell">이자</div>
-                <div class="cell">총 이자</div>
-                <div class="cell">상환원금</div>
-                <div class="cell">총 상환원금</div></div>
-            
-            <div class="row tbody"><div class="cell">1</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">2</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">83.33</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">83.33</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">3</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">125</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">125</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">4</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">166.66</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">166.66</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">5</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">208.33</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">208.33</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">6</div>
-                    <div class="cell">10,000</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">250</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">250</div>
-                    <div class="cell">0</div>
-                    <div class="cell">0</div>
-                </div><div class="row tbody"><div class="cell">7</div>
-                    <div class="cell">9,602.95</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">688.71</div>
-                    <div class="cell">41.66</div>
-                    <div class="cell">291.66</div>
-                    <div class="cell">397.04</div>
-                    <div class="cell">397.04</div>
-                </div><div class="row tbody"><div class="cell">8</div>
-                    <div class="cell">9,204.25</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">1,127.42</div>
-                    <div class="cell">40.01</div>
-                    <div class="cell">331.67</div>
-                    <div class="cell">398.7</div>
-                    <div class="cell">795.74</div>
-                </div><div class="row tbody"><div class="cell">9</div>
-                    <div class="cell">8,803.88</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">1,566.14</div>
-                    <div class="cell">38.35</div>
-                    <div class="cell">370.03</div>
-                    <div class="cell">400.36</div>
-                    <div class="cell">1,196.11</div>
-                </div><div class="row tbody"><div class="cell">10</div>
-                    <div class="cell">8,401.85</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">2,004.85</div>
-                    <div class="cell">36.68</div>
-                    <div class="cell">406.71</div>
-                    <div class="cell">402.03</div>
-                    <div class="cell">1,598.14</div>
-                </div><div class="row tbody"><div class="cell">11</div>
-                    <div class="cell">7,998.15</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">2,443.56</div>
-                    <div class="cell">35</div>
-                    <div class="cell">441.72</div>
-                    <div class="cell">403.7</div>
-                    <div class="cell">2,001.84</div>
-                </div><div class="row tbody"><div class="cell">12</div>
-                    <div class="cell">7,592.76</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">2,882.28</div>
-                    <div class="cell">33.32</div>
-                    <div class="cell">475.04</div>
-                    <div class="cell">405.38</div>
-                    <div class="cell">2,407.23</div>
-                </div><div class="row tbody"><div class="cell">13</div>
-                    <div class="cell">7,185.68</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">3,320.99</div>
-                    <div class="cell">31.63</div>
-                    <div class="cell">506.68</div>
-                    <div class="cell">407.07</div>
-                    <div class="cell">2,814.31</div>
-                </div><div class="row tbody"><div class="cell">14</div>
-                    <div class="cell">6,776.91</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">3,759.71</div>
-                    <div class="cell">29.94</div>
-                    <div class="cell">536.62</div>
-                    <div class="cell">408.77</div>
-                    <div class="cell">3,223.08</div>
-                </div><div class="row tbody"><div class="cell">15</div>
-                    <div class="cell">6,366.43</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">4,198.42</div>
-                    <div class="cell">28.23</div>
-                    <div class="cell">564.86</div>
-                    <div class="cell">410.47</div>
-                    <div class="cell">3,633.56</div>
-                </div><div class="row tbody"><div class="cell">16</div>
-                    <div class="cell">5,954.24</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">4,637.13</div>
-                    <div class="cell">26.52</div>
-                    <div class="cell">591.38</div>
-                    <div class="cell">412.18</div>
-                    <div class="cell">4,045.75</div>
-                </div><div class="row tbody"><div class="cell">17</div>
-                    <div class="cell">5,540.34</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">5,075.85</div>
-                    <div class="cell">24.8</div>
-                    <div class="cell">616.19</div>
-                    <div class="cell">413.9</div>
-                    <div class="cell">4,459.65</div>
-                </div><div class="row tbody"><div class="cell">18</div>
-                    <div class="cell">5,124.71</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">5,514.56</div>
-                    <div class="cell">23.08</div>
-                    <div class="cell">639.28</div>
-                    <div class="cell">415.62</div>
-                    <div class="cell">4,875.28</div>
-                </div><div class="row tbody"><div class="cell">19</div>
-                    <div class="cell">4,707.35</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">5,953.28</div>
-                    <div class="cell">21.35</div>
-                    <div class="cell">660.63</div>
-                    <div class="cell">417.36</div>
-                    <div class="cell">5,292.64</div>
-                </div><div class="row tbody"><div class="cell">20</div>
-                    <div class="cell">4,288.25</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">6,391.99</div>
-                    <div class="cell">19.61</div>
-                    <div class="cell">680.24</div>
-                    <div class="cell">419.09</div>
-                    <div class="cell">5,711.74</div>
-                </div><div class="row tbody"><div class="cell">21</div>
-                    <div class="cell">3,867.4</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">6,830.7</div>
-                    <div class="cell">17.86</div>
-                    <div class="cell">698.11</div>
-                    <div class="cell">420.84</div>
-                    <div class="cell">6,132.59</div>
-                </div><div class="row tbody"><div class="cell">22</div>
-                    <div class="cell">3,444.8</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">7,269.42</div>
-                    <div class="cell">16.11</div>
-                    <div class="cell">714.23</div>
-                    <div class="cell">422.59</div>
-                    <div class="cell">6,555.19</div>
-                </div><div class="row tbody"><div class="cell">23</div>
-                    <div class="cell">3,020.44</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">7,708.13</div>
-                    <div class="cell">14.35</div>
-                    <div class="cell">728.58</div>
-                    <div class="cell">424.36</div>
-                    <div class="cell">6,979.55</div>
-                </div><div class="row tbody"><div class="cell">24</div>
-                    <div class="cell">2,594.31</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">8,146.85</div>
-                    <div class="cell">12.58</div>
-                    <div class="cell">741.16</div>
-                    <div class="cell">426.12</div>
-                    <div class="cell">7,405.68</div>
-                </div><div class="row tbody"><div class="cell">25</div>
-                    <div class="cell">2,166.41</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">8,585.56</div>
-                    <div class="cell">10.8</div>
-                    <div class="cell">751.97</div>
-                    <div class="cell">427.9</div>
-                    <div class="cell">7,833.58</div>
-                </div><div class="row tbody"><div class="cell">26</div>
-                    <div class="cell">1,736.72</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">9,024.27</div>
-                    <div class="cell">9.02</div>
-                    <div class="cell">761</div>
-                    <div class="cell">429.68</div>
-                    <div class="cell">8,263.27</div>
-                </div><div class="row tbody"><div class="cell">27</div>
-                    <div class="cell">1,305.24</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">9,462.99</div>
-                    <div class="cell">7.23</div>
-                    <div class="cell">768.24</div>
-                    <div class="cell">431.47</div>
-                    <div class="cell">8,694.75</div>
-                </div><div class="row tbody"><div class="cell">28</div>
-                    <div class="cell">871.97</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">9,901.7</div>
-                    <div class="cell">5.43</div>
-                    <div class="cell">773.67</div>
-                    <div class="cell">433.27</div>
-                    <div class="cell">9,128.02</div>
-                </div><div class="row tbody"><div class="cell">29</div>
-                    <div class="cell">436.89</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">10,340.41</div>
-                    <div class="cell">3.63</div>
-                    <div class="cell">777.31</div>
-                    <div class="cell">435.08</div>
-                    <div class="cell">9,563.1</div>
-                </div><div class="row tbody"><div class="cell">30</div>
-                    <div class="cell">0</div>
-                    <div class="cell">438.71</div>
-                    <div class="cell">10,779.13</div>
-                    <div class="cell">1.82</div>
-                    <div class="cell">779.13</div>
-                    <div class="cell">436.89</div>
-                    <div class="cell">10,000</div>
-                </div>
-            </div></div></div></main>
+<h1>대출 원리금 계산기</h1>
+<section id="form"><form><label for="principal">대출 금액(만원)</label>
+        <input type="number" name="principal" id="principal" value="10000">
+
+        <label for="interestRate">금리(%)</label>
+        <input type="number" name="interestRate" id="interestRate" value="5">
+
+        <label for="repaymentType">상환방식</label>
+        <select name="" id="repaymentType"><option value="equalPrincipalAndInterest">원리금균등</option><option value="equalPrincipal">원금균등</option><option value="grace">거치식</option></select>
+
+        <label for="repaymentPeriod">상환기간(월)</label>
+        <input type="number" name="repaymentPeriod" id="repaymentPeriod" value="24">
+
+        <label for="gracePeriod">거치기간(월)</label>
+        <input type="number" name="gracePeriod" id="gracePeriod" value="6"></form></section>
+<section id="results"><figure><table><thead><tr><th scope="col">회차</th>
+                <th scope="col">대출잔액</th>
+                <th scope="col">상환금액</th>
+                <th scope="col">총 상환금액</th>
+                <th scope="col">이자</th>
+                <th scope="col">총 이자</th>
+                <th scope="col">상환원금</th>
+                <th scope="col">총 상환원금</th></tr></thead>
+            <tbody><tr><th scope="row">1</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>41.66</td>
+                    <td>41.66</td>
+                    <td>41.66</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">2</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>83.33</td>
+                    <td>41.66</td>
+                    <td>83.33</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">3</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>125</td>
+                    <td>41.66</td>
+                    <td>125</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">4</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>166.66</td>
+                    <td>41.66</td>
+                    <td>166.66</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">5</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>208.33</td>
+                    <td>41.66</td>
+                    <td>208.33</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">6</th>
+                    <td>10,000</td>
+                    <td>41.66</td>
+                    <td>250</td>
+                    <td>41.66</td>
+                    <td>250</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr><tr><th scope="row">7</th>
+                    <td>9,602.95</td>
+                    <td>438.71</td>
+                    <td>688.71</td>
+                    <td>41.66</td>
+                    <td>291.66</td>
+                    <td>397.04</td>
+                    <td>397.04</td>
+                </tr><tr><th scope="row">8</th>
+                    <td>9,204.25</td>
+                    <td>438.71</td>
+                    <td>1,127.42</td>
+                    <td>40.01</td>
+                    <td>331.67</td>
+                    <td>398.7</td>
+                    <td>795.74</td>
+                </tr><tr><th scope="row">9</th>
+                    <td>8,803.88</td>
+                    <td>438.71</td>
+                    <td>1,566.14</td>
+                    <td>38.35</td>
+                    <td>370.03</td>
+                    <td>400.36</td>
+                    <td>1,196.11</td>
+                </tr><tr><th scope="row">10</th>
+                    <td>8,401.85</td>
+                    <td>438.71</td>
+                    <td>2,004.85</td>
+                    <td>36.68</td>
+                    <td>406.71</td>
+                    <td>402.03</td>
+                    <td>1,598.14</td>
+                </tr><tr><th scope="row">11</th>
+                    <td>7,998.15</td>
+                    <td>438.71</td>
+                    <td>2,443.56</td>
+                    <td>35</td>
+                    <td>441.72</td>
+                    <td>403.7</td>
+                    <td>2,001.84</td>
+                </tr><tr><th scope="row">12</th>
+                    <td>7,592.76</td>
+                    <td>438.71</td>
+                    <td>2,882.28</td>
+                    <td>33.32</td>
+                    <td>475.04</td>
+                    <td>405.38</td>
+                    <td>2,407.23</td>
+                </tr><tr><th scope="row">13</th>
+                    <td>7,185.68</td>
+                    <td>438.71</td>
+                    <td>3,320.99</td>
+                    <td>31.63</td>
+                    <td>506.68</td>
+                    <td>407.07</td>
+                    <td>2,814.31</td>
+                </tr><tr><th scope="row">14</th>
+                    <td>6,776.91</td>
+                    <td>438.71</td>
+                    <td>3,759.71</td>
+                    <td>29.94</td>
+                    <td>536.62</td>
+                    <td>408.77</td>
+                    <td>3,223.08</td>
+                </tr><tr><th scope="row">15</th>
+                    <td>6,366.43</td>
+                    <td>438.71</td>
+                    <td>4,198.42</td>
+                    <td>28.23</td>
+                    <td>564.86</td>
+                    <td>410.47</td>
+                    <td>3,633.56</td>
+                </tr><tr><th scope="row">16</th>
+                    <td>5,954.24</td>
+                    <td>438.71</td>
+                    <td>4,637.13</td>
+                    <td>26.52</td>
+                    <td>591.38</td>
+                    <td>412.18</td>
+                    <td>4,045.75</td>
+                </tr><tr><th scope="row">17</th>
+                    <td>5,540.34</td>
+                    <td>438.71</td>
+                    <td>5,075.85</td>
+                    <td>24.8</td>
+                    <td>616.19</td>
+                    <td>413.9</td>
+                    <td>4,459.65</td>
+                </tr><tr><th scope="row">18</th>
+                    <td>5,124.71</td>
+                    <td>438.71</td>
+                    <td>5,514.56</td>
+                    <td>23.08</td>
+                    <td>639.28</td>
+                    <td>415.62</td>
+                    <td>4,875.28</td>
+                </tr><tr><th scope="row">19</th>
+                    <td>4,707.35</td>
+                    <td>438.71</td>
+                    <td>5,953.28</td>
+                    <td>21.35</td>
+                    <td>660.63</td>
+                    <td>417.36</td>
+                    <td>5,292.64</td>
+                </tr><tr><th scope="row">20</th>
+                    <td>4,288.25</td>
+                    <td>438.71</td>
+                    <td>6,391.99</td>
+                    <td>19.61</td>
+                    <td>680.24</td>
+                    <td>419.09</td>
+                    <td>5,711.74</td>
+                </tr><tr><th scope="row">21</th>
+                    <td>3,867.4</td>
+                    <td>438.71</td>
+                    <td>6,830.7</td>
+                    <td>17.86</td>
+                    <td>698.11</td>
+                    <td>420.84</td>
+                    <td>6,132.59</td>
+                </tr><tr><th scope="row">22</th>
+                    <td>3,444.8</td>
+                    <td>438.71</td>
+                    <td>7,269.42</td>
+                    <td>16.11</td>
+                    <td>714.23</td>
+                    <td>422.59</td>
+                    <td>6,555.19</td>
+                </tr><tr><th scope="row">23</th>
+                    <td>3,020.44</td>
+                    <td>438.71</td>
+                    <td>7,708.13</td>
+                    <td>14.35</td>
+                    <td>728.58</td>
+                    <td>424.36</td>
+                    <td>6,979.55</td>
+                </tr><tr><th scope="row">24</th>
+                    <td>2,594.31</td>
+                    <td>438.71</td>
+                    <td>8,146.85</td>
+                    <td>12.58</td>
+                    <td>741.16</td>
+                    <td>426.12</td>
+                    <td>7,405.68</td>
+                </tr><tr><th scope="row">25</th>
+                    <td>2,166.41</td>
+                    <td>438.71</td>
+                    <td>8,585.56</td>
+                    <td>10.8</td>
+                    <td>751.97</td>
+                    <td>427.9</td>
+                    <td>7,833.58</td>
+                </tr><tr><th scope="row">26</th>
+                    <td>1,736.72</td>
+                    <td>438.71</td>
+                    <td>9,024.27</td>
+                    <td>9.02</td>
+                    <td>761</td>
+                    <td>429.68</td>
+                    <td>8,263.27</td>
+                </tr><tr><th scope="row">27</th>
+                    <td>1,305.24</td>
+                    <td>438.71</td>
+                    <td>9,462.99</td>
+                    <td>7.23</td>
+                    <td>768.24</td>
+                    <td>431.47</td>
+                    <td>8,694.75</td>
+                </tr><tr><th scope="row">28</th>
+                    <td>871.97</td>
+                    <td>438.71</td>
+                    <td>9,901.7</td>
+                    <td>5.43</td>
+                    <td>773.67</td>
+                    <td>433.27</td>
+                    <td>9,128.02</td>
+                </tr><tr><th scope="row">29</th>
+                    <td>436.89</td>
+                    <td>438.71</td>
+                    <td>10,340.41</td>
+                    <td>3.63</td>
+                    <td>777.31</td>
+                    <td>435.08</td>
+                    <td>9,563.1</td>
+                </tr><tr><th scope="row">30</th>
+                    <td>0</td>
+                    <td>438.71</td>
+                    <td>10,779.13</td>
+                    <td>1.82</td>
+                    <td>779.13</td>
+                    <td>436.89</td>
+                    <td>10,000</td>
+                </tr></tbody></table></figure></section></main>
 
 <footer></footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1a9o4dc">
-		import { start } from "/_app/start-aa4133e2.js";
+		<script type="module" data-sveltekit-hydrate="1tk09rg">
+		import { start } from "/_app/start-4699f2ed.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1a9o4dc"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1tk09rg"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -314,8 +304,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-e67aa629.js"),
-						import("/_app/pages/loan-interest.svelte-57be955b.js")
+					import("/_app/pages/__layout.svelte-cca89767.js"),
+						import("/_app/pages/loan-interest.svelte-1bd89c99.js")
 				],
 				params: {},
 				routeId: "loan-interest"

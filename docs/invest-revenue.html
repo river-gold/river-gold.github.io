@@ -3,13 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<meta http-equiv="content-security-policy" content=""><title>예적금(투자) 수익 계산기</title>
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-02e22350.css">
-	<link rel="modulepreload" href="/_app/start-aa4133e2.js">
-	<link rel="modulepreload" href="/_app/chunks/index-10c86a67.js">
-	<link rel="modulepreload" href="/_app/chunks/index-8509d97e.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-e67aa629.js">
-	<link rel="modulepreload" href="/_app/pages/invest-revenue.svelte-4be958a4.js">
+	<meta http-equiv="content-security-policy" content=""><title>예적금(투자) 수익 계산기</title><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-h65a3y">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a9b283f.css">
+	<link rel="modulepreload" href="/_app/start-4699f2ed.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a43d9cdb.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a2b24a8c.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cca89767.js">
+	<link rel="modulepreload" href="/_app/pages/invest-revenue.svelte-439f2b33.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/dayjs.min-099b3022.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
@@ -21,187 +21,185 @@
 
 
 
+
 <main>
 
-<div id="app"><div class="title"><h1>예적금(투자) 수익 계산기</h1></div>
-    <div class="table"><form><div class="row"><div class="cell label"><label for="initAmount">초기 투자금</label></div>
-                <div class="cell"></div>
-                <div class="cell"><input type="number" name="initAmount" id="initAmount" value="0"> 만원
-                </div></div>
-            <div class="row"><div class="cell label"><label for="roundAmount">투자 횟수</label></div>
-                <div class="cell right"></div>
-                <div class="cell"><input type="number" name="round" id="round" value="20"> 회
-                </div></div>
-            <div class="row"><div class="cell label"><label for="roundAmount">매회 투자금</label></div>
-                <div class="cell right"><select name="roundType" id="roundType"><option value="yearly">매년</option><option value="monthly">매월</option><option value="daily">매일</option></select></div>
-                <div class="cell"><input type="number" name="roundAmount" id="roundAmount" value="100"> 만원
-                </div></div>
-            <div class="row"><div class="cell label"><label for="interestRate">수익률</label></div>
-                <div class="cell right"><select name="interestExchangeType" id="interestExchangeType"><option value="yearly">연간</option><option value="monthly">월간</option><option value="daily">일간</option></select></div>
-                <div class="cell"><input type="number" name="interestRate" id="interestRate" value="5"> %
-                </div></div>
-            <div class="row"><div class="cell label"><label for="interestRateType">이자 적용 방식</label></div>
-                <div class="cell right"><select name="interestRateType" id="interestRateType"><option value="yearly_compound">연복리</option><option value="monthly_compound">월복리</option><option value="daily_compound">일복리</option><option value="simple">단리</option></select></div></div></form></div>
-    <br>
-    <div id="results"><div class="table"><div class="row"><div class="cell">총액 : 3,471.92 만원
-                </div></div></div>
-        <br>
-        <div class="table"><div class="row thead"><div class="cell">회차</div>
-                <div class="cell">원금</div>
-                <div class="cell">이자</div>
-                <div class="cell">누적 이자</div>
-                <div class="cell">잔액</div>
-                <div class="cell">수익률</div>
-                <div class="cell">누적 수익률</div></div>
-            <div class="row tbody"><div class="cell">1</div>
-                        <div class="cell">100</div>
-                        <div class="cell">5</div>
-                        <div class="cell">5</div>
-                        <div class="cell">105</div>
-                        <div class="cell">5</div>
-                        <div class="cell">5</div>
-                    </div><div class="row tbody"><div class="cell">2</div>
-                        <div class="cell">200</div>
-                        <div class="cell">10.25</div>
-                        <div class="cell">15.25</div>
-                        <div class="cell">215.25</div>
-                        <div class="cell">5.12</div>
-                        <div class="cell">7.62</div>
-                    </div><div class="row tbody"><div class="cell">3</div>
-                        <div class="cell">300</div>
-                        <div class="cell">15.76</div>
-                        <div class="cell">31.01</div>
-                        <div class="cell">331.01</div>
-                        <div class="cell">5.25</div>
-                        <div class="cell">10.33</div>
-                    </div><div class="row tbody"><div class="cell">4</div>
-                        <div class="cell">400</div>
-                        <div class="cell">21.55</div>
-                        <div class="cell">52.56</div>
-                        <div class="cell">452.56</div>
-                        <div class="cell">5.38</div>
-                        <div class="cell">13.14</div>
-                    </div><div class="row tbody"><div class="cell">5</div>
-                        <div class="cell">500</div>
-                        <div class="cell">27.62</div>
-                        <div class="cell">80.19</div>
-                        <div class="cell">580.19</div>
-                        <div class="cell">5.52</div>
-                        <div class="cell">16.03</div>
-                    </div><div class="row tbody"><div class="cell">6</div>
-                        <div class="cell">600</div>
-                        <div class="cell">34</div>
-                        <div class="cell">114.2</div>
-                        <div class="cell">714.2</div>
-                        <div class="cell">5.66</div>
-                        <div class="cell">19.03</div>
-                    </div><div class="row tbody"><div class="cell">7</div>
-                        <div class="cell">700</div>
-                        <div class="cell">40.71</div>
-                        <div class="cell">154.91</div>
-                        <div class="cell">854.91</div>
-                        <div class="cell">5.81</div>
-                        <div class="cell">22.13</div>
-                    </div><div class="row tbody"><div class="cell">8</div>
-                        <div class="cell">800</div>
-                        <div class="cell">47.74</div>
-                        <div class="cell">202.65</div>
-                        <div class="cell">1,002.65</div>
-                        <div class="cell">5.96</div>
-                        <div class="cell">25.33</div>
-                    </div><div class="row tbody"><div class="cell">9</div>
-                        <div class="cell">900</div>
-                        <div class="cell">55.13</div>
-                        <div class="cell">257.78</div>
-                        <div class="cell">1,157.78</div>
-                        <div class="cell">6.12</div>
-                        <div class="cell">28.64</div>
-                    </div><div class="row tbody"><div class="cell">10</div>
-                        <div class="cell">1,000</div>
-                        <div class="cell">62.88</div>
-                        <div class="cell">320.67</div>
-                        <div class="cell">1,320.67</div>
-                        <div class="cell">6.28</div>
-                        <div class="cell">32.06</div>
-                    </div><div class="row tbody"><div class="cell">11</div>
-                        <div class="cell">1,100</div>
-                        <div class="cell">71.03</div>
-                        <div class="cell">391.71</div>
-                        <div class="cell">1,491.71</div>
-                        <div class="cell">6.45</div>
-                        <div class="cell">35.61</div>
-                    </div><div class="row tbody"><div class="cell">12</div>
-                        <div class="cell">1,200</div>
-                        <div class="cell">79.58</div>
-                        <div class="cell">471.29</div>
-                        <div class="cell">1,671.29</div>
-                        <div class="cell">6.63</div>
-                        <div class="cell">39.27</div>
-                    </div><div class="row tbody"><div class="cell">13</div>
-                        <div class="cell">1,300</div>
-                        <div class="cell">88.56</div>
-                        <div class="cell">559.86</div>
-                        <div class="cell">1,859.86</div>
-                        <div class="cell">6.81</div>
-                        <div class="cell">43.06</div>
-                    </div><div class="row tbody"><div class="cell">14</div>
-                        <div class="cell">1,400</div>
-                        <div class="cell">97.99</div>
-                        <div class="cell">657.85</div>
-                        <div class="cell">2,057.85</div>
-                        <div class="cell">6.99</div>
-                        <div class="cell">46.98</div>
-                    </div><div class="row tbody"><div class="cell">15</div>
-                        <div class="cell">1,500</div>
-                        <div class="cell">107.89</div>
-                        <div class="cell">765.74</div>
-                        <div class="cell">2,265.74</div>
-                        <div class="cell">7.19</div>
-                        <div class="cell">51.04</div>
-                    </div><div class="row tbody"><div class="cell">16</div>
-                        <div class="cell">1,600</div>
-                        <div class="cell">118.28</div>
-                        <div class="cell">884.03</div>
-                        <div class="cell">2,484.03</div>
-                        <div class="cell">7.39</div>
-                        <div class="cell">55.25</div>
-                    </div><div class="row tbody"><div class="cell">17</div>
-                        <div class="cell">1,700</div>
-                        <div class="cell">129.2</div>
-                        <div class="cell">1,013.23</div>
-                        <div class="cell">2,713.23</div>
-                        <div class="cell">7.6</div>
-                        <div class="cell">59.6</div>
-                    </div><div class="row tbody"><div class="cell">18</div>
-                        <div class="cell">1,800</div>
-                        <div class="cell">140.66</div>
-                        <div class="cell">1,153.9</div>
-                        <div class="cell">2,953.9</div>
-                        <div class="cell">7.81</div>
-                        <div class="cell">64.1</div>
-                    </div><div class="row tbody"><div class="cell">19</div>
-                        <div class="cell">1,900</div>
-                        <div class="cell">152.69</div>
-                        <div class="cell">1,306.59</div>
-                        <div class="cell">3,206.59</div>
-                        <div class="cell">8.03</div>
-                        <div class="cell">68.76</div>
-                    </div><div class="row tbody"><div class="cell">20</div>
-                        <div class="cell">2,000</div>
-                        <div class="cell">165.32</div>
-                        <div class="cell">1,471.92</div>
-                        <div class="cell">3,471.92</div>
-                        <div class="cell">8.26</div>
-                        <div class="cell">73.59</div>
-                    </div></div></div></div></main>
+<h1>예적금(투자) 수익 계산기</h1>
+
+<section id="form"><form><label for="initAmount">초기 투자금(만원)</label>
+        <input type="number" name="initAmount" id="initAmount" value="0">
+
+        <label for="roundAmount">투자 횟수(회)</label>
+        <input type="number" name="round" id="round" value="20">
+
+        <label for="roundAmount">매회 투자금(만원)</label>
+        <select name="roundType" id="roundType"><option value="yearly">매년</option><option value="monthly">매월</option><option value="daily">매일</option></select>
+        <input type="number" name="roundAmount" id="roundAmount" value="100">
+
+        <label for="interestRate">수익률(%)</label>
+        <select name="interestExchangeType" id="interestExchangeType"><option value="yearly">연간</option><option value="monthly">월간</option><option value="daily">일간</option></select>
+        <input type="number" name="interestRate" id="interestRate" value="5">
+
+        <label for="interestRateType">이자 적용 방식</label>
+        <select name="interestRateType" id="interestRateType"><option value="yearly_compound">연복리</option><option value="monthly_compound">월복리</option><option value="daily_compound">일복리</option><option value="simple">단리</option></select></form></section>
+
+<section id="results"><h4>총액 : 3,471.92 만원</h4>
+    <figure><table role="grid"><thead><tr><th scope="col">회차</th>
+                <th scope="col">원금</th>
+                <th scope="col">이자</th>
+                <th scope="col">누적 이자</th>
+                <th scope="col">잔액</th>
+                <th scope="col">수익률</th>
+                <th scope="col">누적 수익률</th></tr></thead>
+            <tbody><tr><th scope="row">1</th>
+                        <td>100</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>105</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr><tr><th scope="row">2</th>
+                        <td>200</td>
+                        <td>10.25</td>
+                        <td>15.25</td>
+                        <td>215.25</td>
+                        <td>5.12</td>
+                        <td>7.62</td>
+                    </tr><tr><th scope="row">3</th>
+                        <td>300</td>
+                        <td>15.76</td>
+                        <td>31.01</td>
+                        <td>331.01</td>
+                        <td>5.25</td>
+                        <td>10.33</td>
+                    </tr><tr><th scope="row">4</th>
+                        <td>400</td>
+                        <td>21.55</td>
+                        <td>52.56</td>
+                        <td>452.56</td>
+                        <td>5.38</td>
+                        <td>13.14</td>
+                    </tr><tr><th scope="row">5</th>
+                        <td>500</td>
+                        <td>27.62</td>
+                        <td>80.19</td>
+                        <td>580.19</td>
+                        <td>5.52</td>
+                        <td>16.03</td>
+                    </tr><tr><th scope="row">6</th>
+                        <td>600</td>
+                        <td>34</td>
+                        <td>114.2</td>
+                        <td>714.2</td>
+                        <td>5.66</td>
+                        <td>19.03</td>
+                    </tr><tr><th scope="row">7</th>
+                        <td>700</td>
+                        <td>40.71</td>
+                        <td>154.91</td>
+                        <td>854.91</td>
+                        <td>5.81</td>
+                        <td>22.13</td>
+                    </tr><tr><th scope="row">8</th>
+                        <td>800</td>
+                        <td>47.74</td>
+                        <td>202.65</td>
+                        <td>1,002.65</td>
+                        <td>5.96</td>
+                        <td>25.33</td>
+                    </tr><tr><th scope="row">9</th>
+                        <td>900</td>
+                        <td>55.13</td>
+                        <td>257.78</td>
+                        <td>1,157.78</td>
+                        <td>6.12</td>
+                        <td>28.64</td>
+                    </tr><tr><th scope="row">10</th>
+                        <td>1,000</td>
+                        <td>62.88</td>
+                        <td>320.67</td>
+                        <td>1,320.67</td>
+                        <td>6.28</td>
+                        <td>32.06</td>
+                    </tr><tr><th scope="row">11</th>
+                        <td>1,100</td>
+                        <td>71.03</td>
+                        <td>391.71</td>
+                        <td>1,491.71</td>
+                        <td>6.45</td>
+                        <td>35.61</td>
+                    </tr><tr><th scope="row">12</th>
+                        <td>1,200</td>
+                        <td>79.58</td>
+                        <td>471.29</td>
+                        <td>1,671.29</td>
+                        <td>6.63</td>
+                        <td>39.27</td>
+                    </tr><tr><th scope="row">13</th>
+                        <td>1,300</td>
+                        <td>88.56</td>
+                        <td>559.86</td>
+                        <td>1,859.86</td>
+                        <td>6.81</td>
+                        <td>43.06</td>
+                    </tr><tr><th scope="row">14</th>
+                        <td>1,400</td>
+                        <td>97.99</td>
+                        <td>657.85</td>
+                        <td>2,057.85</td>
+                        <td>6.99</td>
+                        <td>46.98</td>
+                    </tr><tr><th scope="row">15</th>
+                        <td>1,500</td>
+                        <td>107.89</td>
+                        <td>765.74</td>
+                        <td>2,265.74</td>
+                        <td>7.19</td>
+                        <td>51.04</td>
+                    </tr><tr><th scope="row">16</th>
+                        <td>1,600</td>
+                        <td>118.28</td>
+                        <td>884.03</td>
+                        <td>2,484.03</td>
+                        <td>7.39</td>
+                        <td>55.25</td>
+                    </tr><tr><th scope="row">17</th>
+                        <td>1,700</td>
+                        <td>129.2</td>
+                        <td>1,013.23</td>
+                        <td>2,713.23</td>
+                        <td>7.6</td>
+                        <td>59.6</td>
+                    </tr><tr><th scope="row">18</th>
+                        <td>1,800</td>
+                        <td>140.66</td>
+                        <td>1,153.9</td>
+                        <td>2,953.9</td>
+                        <td>7.81</td>
+                        <td>64.1</td>
+                    </tr><tr><th scope="row">19</th>
+                        <td>1,900</td>
+                        <td>152.69</td>
+                        <td>1,306.59</td>
+                        <td>3,206.59</td>
+                        <td>8.03</td>
+                        <td>68.76</td>
+                    </tr><tr><th scope="row">20</th>
+                        <td>2,000</td>
+                        <td>165.32</td>
+                        <td>1,471.92</td>
+                        <td>3,471.92</td>
+                        <td>8.26</td>
+                        <td>73.59</td>
+                    </tr></tbody></table></figure></section></main>
 
 <footer></footer>
 
 
-		<script type="module" data-sveltekit-hydrate="6t8o7a">
-		import { start } from "/_app/start-aa4133e2.js";
+		<script type="module" data-sveltekit-hydrate="24gytm">
+		import { start } from "/_app/start-4699f2ed.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="6t8o7a"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="24gytm"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -211,8 +209,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-e67aa629.js"),
-						import("/_app/pages/invest-revenue.svelte-4be958a4.js")
+					import("/_app/pages/__layout.svelte-cca89767.js"),
+						import("/_app/pages/invest-revenue.svelte-439f2b33.js")
 				],
 				params: {},
 				routeId: "invest-revenue"
