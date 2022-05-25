@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-4699f2ed.js",
+    "file": "start-d9d0aab6.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -46,7 +46,7 @@
     ]
   },
   "src/routes/counter.svelte": {
-    "file": "pages/counter.svelte-34993f9a.js",
+    "file": "pages/counter.svelte-506448cc.js",
     "src": "src/routes/counter.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -57,7 +57,7 @@
       "_index-a2b24a8c.js"
     ],
     "css": [
-      "assets/pages/counter.svelte-175f8c48.css"
+      "assets/pages/counter.svelte-f4d04d2e.css"
     ]
   },
   "src/routes/index.svelte": {
