@@ -4,12 +4,14 @@
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 	<meta http-equiv="content-security-policy" content=""><title>월세 수익률 계산기</title><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-h65a3y">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-7bb43748.css">
-	<link rel="modulepreload" href="/_app/start-06d59cc2.js">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-6fef3a05.css">
+	<link rel="stylesheet" href="/_app/assets/pages/menu.svelte-251fefe5.css">
+	<link rel="modulepreload" href="/_app/start-a3629c93.js">
 	<link rel="modulepreload" href="/_app/chunks/index-a43d9cdb.js">
 	<link rel="modulepreload" href="/_app/chunks/index-a2b24a8c.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cca89767.js">
-	<link rel="modulepreload" href="/_app/pages/real-estate-rental-yield.svelte-992b93d7.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-f31502c3.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-edd617b5.js">
+	<link rel="modulepreload" href="/_app/pages/real-estate-rental-yield.svelte-797912e3.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 </head>
 <body>
@@ -18,8 +20,21 @@
 
 
 
+<div class="container"><menu><nav class="svelte-1v9hisr"><h1 class="svelte-1v9hisr"><a href="/" class="svelte-1v9hisr">온라인 도구 모음</a></h1>
+    <details open><summary>금융/투자/부동산</summary>
+        <ul class="svelte-1v9hisr"><li class="svelte-1v9hisr"><a sveltekit:prefetch href="/real-estate-rental-yield">월세 수익률 계산기</a></li>
+            <li class="svelte-1v9hisr"><a sveltekit:prefetch href="/invest-revenue">예적금(투자) 수익 계산기</a></li>
+            <li class="svelte-1v9hisr"><a sveltekit:prefetch href="/invest-days">예적금(투자) 기간 계산기</a></li>
+            <li class="svelte-1v9hisr"><a sveltekit:prefetch href="/loan-interest">대출 원리금 계산기</a></li></ul></details>
+    <details open><summary>랜덤/복권</summary>
+        <ul class="svelte-1v9hisr"><li class="svelte-1v9hisr"><a sveltekit:prefetch href="/random-string">랜덤 문자열 생성기</a></li>
+            <li class="svelte-1v9hisr"><a sveltekit:prefetch href="/lotto">로또 번호 생성기</a></li>
+            <li class="svelte-1v9hisr"><a sveltekit:prefetch href="/random-restaurant">랜덤 음식점</a></li></ul></details>
+    <details open><summary>기타</summary>
+        <ul class="svelte-1v9hisr"><li class="svelte-1v9hisr"><a sveltekit:prefetch href="/counter">수동 계수기</a></li></ul></details>
+</nav></menu>
 
-<main>
+    <main>
 
 <h1>월세 수익률 계산기</h1>
 <section id="form"><form>
@@ -50,10 +65,10 @@
         
         
         
-        <div class="row"><div class="cell label"><label for="deposit">보증금(만원)</label></div>
-            <div class="cell"><input type="number" name="deposit" id="deposit" value="5000"></div></div>
-        <div class="row"><div class="cell label"><label for="rent">월세(만원)</label></div>
-            <div class="cell"><input type="number" name="rent" id="rent" value="50"></div></div>
+        <label for="deposit">보증금(만원)</label>
+        <input type="number" name="deposit" id="deposit" value="5000">
+        <label for="rent">월세(만원)</label>
+        <input type="number" name="rent" id="rent" value="50">
         
         
         
@@ -81,8 +96,7 @@
         
         
         
-        
-        <div class="button"><input type="reset"></div></form></section>
+        </form></section>
 
 <section id="results"><h4><ul><li>총 투자금 : 12000만원</li>
             <li>월간 수익 : 50만원</li>
@@ -98,13 +112,15 @@
             <li>순 연간 수익 : 399.96만원</li>
             <li>순 연간 수익율 : 20.00%</li></ul></h4></section></main>
 
-<footer></footer>
+    <footer>Copyright © 2022 River. All rights reserved.
+    </footer>
+</div>
 
 
-		<script type="module" data-sveltekit-hydrate="thwc5">
-		import { start } from "/_app/start-06d59cc2.js";
+		<script type="module" data-sveltekit-hydrate="d6lwfm">
+		import { start } from "/_app/start-a3629c93.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="thwc5"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="d6lwfm"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -114,8 +130,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-cca89767.js"),
-						import("/_app/pages/real-estate-rental-yield.svelte-992b93d7.js")
+					import("/_app/pages/__layout.svelte-f31502c3.js"),
+						import("/_app/pages/real-estate-rental-yield.svelte-797912e3.js")
 				],
 				params: {},
 				routeId: "real-estate-rental-yield"

@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-06d59cc2.js",
+    "file": "start-a3629c93.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -19,21 +19,35 @@
       "src/routes/lotto/lotto-number.svelte",
       "src/routes/lotto/lotto-numbers.svelte",
       "src/routes/lotto/results-lotto-numbers.svelte",
+      "src/routes/menu.svelte",
       "src/routes/random-restaurant/index.svelte",
       "src/routes/random-string.svelte",
       "src/routes/real-estate-rental-yield.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-cca89767.js",
+    "file": "pages/__layout.svelte-f31502c3.js",
     "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a43d9cdb.js",
+      "src/routes/menu.svelte"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-6fef3a05.css"
+    ]
+  },
+  "src/routes/menu.svelte": {
+    "file": "pages/menu.svelte-edd617b5.js",
+    "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-a43d9cdb.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-7bb43748.css"
+      "assets/pages/menu.svelte-251fefe5.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -46,7 +60,7 @@
     ]
   },
   "src/routes/counter.svelte": {
-    "file": "pages/counter.svelte-506448cc.js",
+    "file": "pages/counter.svelte-169e11d3.js",
     "src": "src/routes/counter.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -57,11 +71,11 @@
       "_index-a2b24a8c.js"
     ],
     "css": [
-      "assets/pages/counter.svelte-f4d04d2e.css"
+      "assets/pages/counter.svelte-7b78e7c9.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-c141d40a.js",
+    "file": "pages/index.svelte-6ac64179.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -109,7 +123,7 @@
     ]
   },
   "src/routes/lotto/index.svelte": {
-    "file": "pages/lotto/index.svelte-409d5267.js",
+    "file": "pages/lotto/index.svelte-b74b7871.js",
     "src": "src/routes/lotto/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -127,7 +141,7 @@
     ]
   },
   "src/routes/lotto/results-lotto-numbers.svelte": {
-    "file": "pages/lotto/results-lotto-numbers.svelte-17663b2c.js",
+    "file": "pages/lotto/results-lotto-numbers.svelte-d1458af6.js",
     "src": "src/routes/lotto/results-lotto-numbers.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -141,7 +155,7 @@
       "__commonjsHelpers-7d66b65f.js"
     ],
     "css": [
-      "assets/pages/lotto/results-lotto-numbers.svelte-cf44b5ce.css"
+      "assets/pages/lotto/results-lotto-numbers.svelte-2a2b4ec1.css"
     ]
   },
   "src/routes/lotto/lotto-numbers.svelte": {
@@ -203,7 +217,7 @@
     ]
   },
   "src/routes/real-estate-rental-yield.svelte": {
-    "file": "pages/real-estate-rental-yield.svelte-992b93d7.js",
+    "file": "pages/real-estate-rental-yield.svelte-797912e3.js",
     "src": "src/routes/real-estate-rental-yield.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
