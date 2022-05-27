@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-df1797b1.js",
+    "file": "start-cefed415.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -10,12 +10,12 @@
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "src/routes/counter.svelte",
+      "src/routes/counter/index.svelte",
       "src/routes/footer.svelte",
       "src/routes/index.svelte",
-      "src/routes/invest-days.svelte",
-      "src/routes/invest-revenue.svelte",
-      "src/routes/loan-interest.svelte",
+      "src/routes/invest-days/index.svelte",
+      "src/routes/invest-revenue/index.svelte",
+      "src/routes/loan-interest/index.svelte",
       "src/routes/lotto/index.svelte",
       "src/routes/lotto/lotto-number.svelte",
       "src/routes/lotto/lotto-numbers.svelte",
@@ -24,12 +24,12 @@
       "src/routes/menu.svelte",
       "src/routes/mobile-navi.svelte",
       "src/routes/random-restaurant/index.svelte",
-      "src/routes/random-string.svelte",
-      "src/routes/real-estate-rental-yield.svelte"
+      "src/routes/random-string/index.svelte",
+      "src/routes/real-estate-rental-yield/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-3dea511f.js",
+    "file": "pages/__layout.svelte-333e5c64.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -45,7 +45,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-d170b02c.js",
+    "file": "pages/menu.svelte-b0d2827e.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -53,7 +53,7 @@
       "_index-1071a69b.js"
     ],
     "css": [
-      "assets/pages/menu.svelte-03e58726.css"
+      "assets/pages/menu.svelte-a4428621.css"
     ]
   },
   "src/routes/mobile-navi.svelte": {
@@ -101,19 +101,19 @@
       "_index-1071a69b.js"
     ]
   },
-  "src/routes/counter.svelte": {
-    "file": "pages/counter.svelte-575f6114.js",
-    "src": "src/routes/counter.svelte",
+  "src/routes/counter/index.svelte": {
+    "file": "pages/counter/index.svelte-ac2fd08e.js",
+    "src": "src/routes/counter/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-1071a69b.js",
       "_env-6d58f0dd.js",
-      "_common-c877baa1.js",
+      "_common-06537ded.js",
       "_index-54e5ac8a.js"
     ],
     "css": [
-      "assets/pages/counter.svelte-7b78e7c9.css"
+      "assets/pages/counter/index.svelte-f5d402e2.css"
     ]
   },
   "src/routes/index.svelte": {
@@ -126,9 +126,9 @@
       "_env-6d58f0dd.js"
     ]
   },
-  "src/routes/invest-days.svelte": {
-    "file": "pages/invest-days.svelte-365e2a21.js",
-    "src": "src/routes/invest-days.svelte",
+  "src/routes/invest-days/index.svelte": {
+    "file": "pages/invest-days/index.svelte-3d33e134.js",
+    "src": "src/routes/invest-days/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -139,9 +139,9 @@
       "__commonjsHelpers-7d66b65f.js"
     ]
   },
-  "src/routes/invest-revenue.svelte": {
-    "file": "pages/invest-revenue.svelte-af3a05e9.js",
-    "src": "src/routes/invest-revenue.svelte",
+  "src/routes/invest-revenue/index.svelte": {
+    "file": "pages/invest-revenue/index.svelte-e59fa261.js",
+    "src": "src/routes/invest-revenue/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -152,9 +152,9 @@
       "__commonjsHelpers-7d66b65f.js"
     ]
   },
-  "src/routes/loan-interest.svelte": {
-    "file": "pages/loan-interest.svelte-37d8fc09.js",
-    "src": "src/routes/loan-interest.svelte",
+  "src/routes/loan-interest/index.svelte": {
+    "file": "pages/loan-interest/index.svelte-8f22546d.js",
+    "src": "src/routes/loan-interest/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -165,7 +165,7 @@
     ]
   },
   "src/routes/lotto/index.svelte": {
-    "file": "pages/lotto/index.svelte-4249e39e.js",
+    "file": "pages/lotto/index.svelte-33d9c1c9.js",
     "src": "src/routes/lotto/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -179,11 +179,11 @@
       "_index-54e5ac8a.js",
       "_clipboard-6d22df92.js",
       "__commonjsHelpers-7d66b65f.js",
-      "_common-c877baa1.js"
+      "_common-06537ded.js"
     ]
   },
   "src/routes/lotto/results-lotto-numbers.svelte": {
-    "file": "pages/lotto/results-lotto-numbers.svelte-f274f340.js",
+    "file": "pages/lotto/results-lotto-numbers.svelte-487abe25.js",
     "src": "src/routes/lotto/results-lotto-numbers.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -192,7 +192,7 @@
       "src/routes/lotto/lotto-number.svelte",
       "_store-111114d7.js",
       "_clipboard-6d22df92.js",
-      "_common-c877baa1.js",
+      "_common-06537ded.js",
       "_index-54e5ac8a.js",
       "__commonjsHelpers-7d66b65f.js"
     ],
@@ -201,7 +201,7 @@
     ]
   },
   "src/routes/lotto/lotto-numbers.svelte": {
-    "file": "pages/lotto/lotto-numbers.svelte-6668fae9.js",
+    "file": "pages/lotto/lotto-numbers.svelte-f3951ac6.js",
     "src": "src/routes/lotto/lotto-numbers.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -209,7 +209,7 @@
       "_index-1071a69b.js",
       "src/routes/lotto/lotto-number.svelte",
       "_store-111114d7.js",
-      "_common-c877baa1.js",
+      "_common-06537ded.js",
       "_index-54e5ac8a.js"
     ],
     "css": [
@@ -229,13 +229,13 @@
     ]
   },
   "src/routes/random-restaurant/index.svelte": {
-    "file": "pages/random-restaurant/index.svelte-01057aff.js",
+    "file": "pages/random-restaurant/index.svelte-978f5912.js",
     "src": "src/routes/random-restaurant/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-1071a69b.js",
-      "_common-c877baa1.js",
+      "_common-06537ded.js",
       "_index-54e5ac8a.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
       "_env-6d58f0dd.js",
@@ -245,22 +245,22 @@
       "assets/pages/random-restaurant/index.svelte-18422e30.css"
     ]
   },
-  "src/routes/random-string.svelte": {
-    "file": "pages/random-string.svelte-4300a970.js",
-    "src": "src/routes/random-string.svelte",
+  "src/routes/random-string/index.svelte": {
+    "file": "pages/random-string/index.svelte-d0538b1f.js",
+    "src": "src/routes/random-string/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-1071a69b.js",
       "_env-6d58f0dd.js",
       "_clipboard-6d22df92.js",
-      "_common-c877baa1.js",
+      "_common-06537ded.js",
       "__commonjsHelpers-7d66b65f.js"
     ]
   },
-  "src/routes/real-estate-rental-yield.svelte": {
-    "file": "pages/real-estate-rental-yield.svelte-247ad1bc.js",
-    "src": "src/routes/real-estate-rental-yield.svelte",
+  "src/routes/real-estate-rental-yield/index.svelte": {
+    "file": "pages/real-estate-rental-yield/index.svelte-dd6c520a.js",
+    "src": "src/routes/real-estate-rental-yield/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -280,8 +280,8 @@
   "_env-6d58f0dd.js": {
     "file": "chunks/env-6d58f0dd.js"
   },
-  "_common-c877baa1.js": {
-    "file": "chunks/common-c877baa1.js"
+  "_common-06537ded.js": {
+    "file": "chunks/common-06537ded.js"
   },
   "_dayjs.min-099b3022.js": {
     "file": "chunks/dayjs.min-099b3022.js",
