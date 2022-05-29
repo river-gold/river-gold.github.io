@@ -1,0 +1,139 @@
+<!doctype html>
+<!--<html lang="ko_KR">-->
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="content-security-policy" content=""><title>LTV/DTI/DSR 계산기</title><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-h65a3y">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-8a01ad5d.css">
+	<link rel="stylesheet" href="/_app/assets/pages/menu.svelte-a9476669.css">
+	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
+	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
+	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
+	<link rel="stylesheet" href="/_app/assets/pages/ltv-dti-dsr/index.svelte-c54d73ed.css">
+	<link rel="modulepreload" href="/_app/start-e8cfb929.js">
+	<link rel="modulepreload" href="/_app/chunks/index-f64bfa0f.js">
+	<link rel="modulepreload" href="/_app/chunks/index-cc02163d.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-97a6781a.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-9554ed27.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-326c6d9b.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-9d454cf6.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-adf7a301.js">
+	<link rel="modulepreload" href="/_app/pages/ltv-dti-dsr/index.svelte-9a748c9e.js">
+	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
+	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
+	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
+</head>
+<body>
+	
+
+
+
+
+<div class="container svelte-14pz54z"><menu class="svelte-x1jw2s"><nav class="svelte-x1jw2s"><h2 class="svelte-x1jw2s"><a href="/" class="svelte-x1jw2s">온라인 도구 모음</a></h2>
+        <details open><summary class="svelte-x1jw2s">금융/투자/부동산</summary>
+            <ul class="svelte-x1jw2s"><li class="svelte-x1jw2s"><a sveltekit:prefetch href="/real-estate-rental-yield" class="svelte-x1jw2s">월세 수익률 계산기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/invest-revenue" class="svelte-x1jw2s">예적금(투자) 수익 계산기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/invest-days" class="svelte-x1jw2s">예적금(투자) 기간 계산기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/loan-interest" class="svelte-x1jw2s">대출 원리금 계산기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-x1jw2s current">LTV/DTI/DSR 통합 계산기</a></li></ul></details>
+        <details open><summary class="svelte-x1jw2s">랜덤/복권</summary>
+            <ul class="svelte-x1jw2s"><li class="svelte-x1jw2s"><a sveltekit:prefetch href="/random-string" class="svelte-x1jw2s">랜덤 문자열 생성기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/lotto" class="svelte-x1jw2s">로또 번호 생성기</a></li>
+                <li class="svelte-x1jw2s"><a sveltekit:prefetch href="/random-restaurant" class="svelte-x1jw2s">랜덤 음식점</a></li></ul></details>
+        <details open><summary class="svelte-x1jw2s">기타</summary>
+            <ul class="svelte-x1jw2s"><li class="svelte-x1jw2s"><a sveltekit:prefetch href="/counter" class="svelte-x1jw2s">수동 계수기</a></li></ul></details></nav>
+</menu>
+    <main class="svelte-vryusu">
+
+<h1>LTV/DTI/DSR 계산기</h1>
+
+<section id="form"><form><fieldset class="grid svelte-fkjeo2"><label for="useLtv" class="svelte-fkjeo2"><input type="checkbox" id="useLtv" name="useLtv" checked> LTV
+
+</label>
+            <label for="useDti" class="svelte-fkjeo2"><input type="checkbox" id="useDti" name="useDti" checked> DTI
+
+</label>
+            <label for="useDsr" class="svelte-fkjeo2"><input type="checkbox" id="useDsr" name="useDsr" checked> DSR
+
+</label></fieldset>
+
+        <label for="loanAmount">대출 금액(만원)</label>
+        <input type="number" name="loanAmount" id="loanAmount"  value="30000">
+
+        <label for="mortgageAmount">부동산 담보 가격(만원)</label>
+        <input type="number" name="mortgageAmount" id="mortgageAmount"  value="60000">
+
+        <label for="annualIncome">연간 소득(만원)</label>
+        <input type="number" name="annualIncome" id="annualIncome"  value="6000">
+
+        <label for="monthlyRepaymentInterest">월 상환 이자(만원)</label>
+        <input type="number" name="monthlyRepaymentInterest" id="monthlyRepaymentInterest"  value="100">
+        <small>신규, 기존 대출 포함</small>
+
+        <label for="monthlyRepaymentPrincipal">월 상환 원금(만원)</label>
+        <input type="number" name="monthlyRepaymentPrincipal" id="monthlyRepaymentPrincipal"  value="120">
+        <small>신규, 기존 대출 포함</small></form></section>
+<session id="results">
+
+
+
+
+
+
+
+        <table role="grid"><thead><tr>
+                <th scope="col" class="svelte-fkjeo2">LTV</th>
+                <th scope="col" class="svelte-fkjeo2">DTI</th>
+                <th scope="col" class="svelte-fkjeo2">DSR</th></tr></thead>
+            <tbody><tr>
+                <td class="svelte-fkjeo2">50%</td>
+                <td class="svelte-fkjeo2">20%</td>
+                <td class="svelte-fkjeo2">44%</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+</session>
+</main>
+    <footer class="svelte-1j6maev">Copyright © 2022 River. All rights reserved.
+</footer></div>
+
+<div id="mobile-navi" class="svelte-14dqvfb"><div id="hamburger" class="svelte-14dqvfb" style="display: block;"><span class="svelte-14dqvfb"></span>
+        <span class="svelte-14dqvfb"></span>
+        <span class="svelte-14dqvfb"></span></div>
+    <div id="hamburgerX" class="svelte-14dqvfb" style="display: none;">X
+    </div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1eyzf6s">
+		import { start } from "/_app/start-e8cfb929.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1eyzf6s"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-97a6781a.js"),
+						import("/_app/pages/ltv-dti-dsr/index.svelte-9a748c9e.js")
+				],
+				params: {},
+				routeId: "ltv-dti-dsr"
+			}
+		});
+	</script>
+</body>
+</html>

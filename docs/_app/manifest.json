@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ada79b78.js",
+    "file": "start-e8cfb929.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -20,6 +20,7 @@
       "src/routes/lotto/lotto-number.svelte",
       "src/routes/lotto/lotto-numbers.svelte",
       "src/routes/lotto/results-lotto-numbers.svelte",
+      "src/routes/ltv-dti-dsr/index.svelte",
       "src/routes/main.svelte",
       "src/routes/menu.svelte",
       "src/routes/mobile-navi.svelte",
@@ -29,7 +30,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-e70bfafd.js",
+    "file": "pages/__layout.svelte-97a6781a.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -45,7 +46,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-0c4f32b5.js",
+    "file": "pages/menu.svelte-9554ed27.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -57,7 +58,7 @@
     ]
   },
   "src/routes/mobile-navi.svelte": {
-    "file": "pages/mobile-navi.svelte-4764f08e.js",
+    "file": "pages/mobile-navi.svelte-326c6d9b.js",
     "src": "src/routes/mobile-navi.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -65,7 +66,7 @@
       "_index-f64bfa0f.js"
     ],
     "css": [
-      "assets/pages/mobile-navi.svelte-43e238b5.css"
+      "assets/pages/mobile-navi.svelte-567b7393.css"
     ]
   },
   "src/routes/footer.svelte": {
@@ -102,7 +103,7 @@
     ]
   },
   "src/routes/counter/index.svelte": {
-    "file": "pages/counter/index.svelte-f5a07094.js",
+    "file": "pages/counter/index.svelte-c7562280.js",
     "src": "src/routes/counter/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -113,7 +114,7 @@
       "_index-cc02163d.js"
     ],
     "css": [
-      "assets/pages/counter/index.svelte-f5d402e2.css"
+      "assets/pages/counter/index.svelte-439297a1.css"
     ]
   },
   "src/routes/index.svelte": {
@@ -168,7 +169,7 @@
     ]
   },
   "src/routes/lotto/index.svelte": {
-    "file": "pages/lotto/index.svelte-e4d37b35.js",
+    "file": "pages/lotto/index.svelte-9eaa7fbb.js",
     "src": "src/routes/lotto/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -186,7 +187,7 @@
     ]
   },
   "src/routes/lotto/results-lotto-numbers.svelte": {
-    "file": "pages/lotto/results-lotto-numbers.svelte-d7480df4.js",
+    "file": "pages/lotto/results-lotto-numbers.svelte-1458b306.js",
     "src": "src/routes/lotto/results-lotto-numbers.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -200,11 +201,11 @@
       "__commonjsHelpers-7d66b65f.js"
     ],
     "css": [
-      "assets/pages/lotto/results-lotto-numbers.svelte-2a2b4ec1.css"
+      "assets/pages/lotto/results-lotto-numbers.svelte-7f966bd5.css"
     ]
   },
   "src/routes/lotto/lotto-numbers.svelte": {
-    "file": "pages/lotto/lotto-numbers.svelte-4ec34392.js",
+    "file": "pages/lotto/lotto-numbers.svelte-182405bc.js",
     "src": "src/routes/lotto/lotto-numbers.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -216,11 +217,11 @@
       "_index-cc02163d.js"
     ],
     "css": [
-      "assets/pages/lotto/lotto-numbers.svelte-1540f92b.css"
+      "assets/pages/lotto/lotto-numbers.svelte-bd3aa565.css"
     ]
   },
   "src/routes/lotto/lotto-number.svelte": {
-    "file": "pages/lotto/lotto-number.svelte-e64daaf5.js",
+    "file": "pages/lotto/lotto-number.svelte-2400fa3b.js",
     "src": "src/routes/lotto/lotto-number.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -228,11 +229,26 @@
       "_index-f64bfa0f.js"
     ],
     "css": [
-      "assets/pages/lotto/lotto-number.svelte-84dbe265.css"
+      "assets/pages/lotto/lotto-number.svelte-c80a053c.css"
+    ]
+  },
+  "src/routes/ltv-dti-dsr/index.svelte": {
+    "file": "pages/ltv-dti-dsr/index.svelte-9a748c9e.js",
+    "src": "src/routes/ltv-dti-dsr/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-f64bfa0f.js",
+      "_env-6d58f0dd.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "__commonjsHelpers-7d66b65f.js"
+    ],
+    "css": [
+      "assets/pages/ltv-dti-dsr/index.svelte-c54d73ed.css"
     ]
   },
   "src/routes/random-restaurant/index.svelte": {
-    "file": "pages/random-restaurant/index.svelte-23a960c4.js",
+    "file": "pages/random-restaurant/index.svelte-29f13d5c.js",
     "src": "src/routes/random-restaurant/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -245,7 +261,7 @@
       "__commonjsHelpers-7d66b65f.js"
     ],
     "css": [
-      "assets/pages/random-restaurant/index.svelte-18422e30.css"
+      "assets/pages/random-restaurant/index.svelte-3ba3f053.css"
     ]
   },
   "src/routes/random-string/index.svelte": {
