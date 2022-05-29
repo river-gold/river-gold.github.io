@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c6ab28b6.js",
+    "file": "start-a0b9f68d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -24,13 +24,16 @@
       "src/routes/main.svelte",
       "src/routes/menu.svelte",
       "src/routes/mobile-navi.svelte",
+      "src/routes/random-cafe/index.svelte",
+      "src/routes/random-cultural/index.svelte",
+      "src/routes/random-place/index.svelte",
       "src/routes/random-restaurant/index.svelte",
       "src/routes/random-string/index.svelte",
       "src/routes/real-estate-rental-yield/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-5f3840bd.js",
+    "file": "pages/__layout.svelte-2fc11782.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -46,7 +49,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-276c1d95.js",
+    "file": "pages/menu.svelte-6aeda557.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -54,11 +57,11 @@
       "_index-f64bfa0f.js"
     ],
     "css": [
-      "assets/pages/menu.svelte-a9476669.css"
+      "assets/pages/menu.svelte-f0ef35ae.css"
     ]
   },
   "src/routes/mobile-navi.svelte": {
-    "file": "pages/mobile-navi.svelte-326c6d9b.js",
+    "file": "pages/mobile-navi.svelte-77c101da.js",
     "src": "src/routes/mobile-navi.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -66,7 +69,7 @@
       "_index-f64bfa0f.js"
     ],
     "css": [
-      "assets/pages/mobile-navi.svelte-567b7393.css"
+      "assets/pages/mobile-navi.svelte-6584b091.css"
     ]
   },
   "src/routes/footer.svelte": {
@@ -118,7 +121,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-ee5a8aca.js",
+    "file": "pages/index.svelte-50531484.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -247,21 +250,69 @@
       "assets/pages/ltv-dti-dsr/index.svelte-c54d73ed.css"
     ]
   },
+  "src/routes/random-cafe/index.svelte": {
+    "file": "pages/random-cafe/index.svelte-5eb00a0f.js",
+    "src": "src/routes/random-cafe/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-f64bfa0f.js",
+      "_env-6d58f0dd.js",
+      "_common-e8a5ed7b.js",
+      "src/routes/random-place/index.svelte",
+      "_common-06537ded.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "__commonjsHelpers-7d66b65f.js",
+      "_index-cc02163d.js"
+    ]
+  },
+  "src/routes/random-place/index.svelte": {
+    "file": "pages/random-place/index.svelte-54928f8e.js",
+    "src": "src/routes/random-place/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-f64bfa0f.js",
+      "_env-6d58f0dd.js",
+      "_common-06537ded.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "_index-cc02163d.js",
+      "__commonjsHelpers-7d66b65f.js"
+    ],
+    "css": [
+      "assets/pages/random-place/index.svelte-9aaaa658.css"
+    ]
+  },
+  "src/routes/random-cultural/index.svelte": {
+    "file": "pages/random-cultural/index.svelte-dcf847d2.js",
+    "src": "src/routes/random-cultural/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-f64bfa0f.js",
+      "_env-6d58f0dd.js",
+      "_common-e8a5ed7b.js",
+      "src/routes/random-place/index.svelte",
+      "_common-06537ded.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "__commonjsHelpers-7d66b65f.js",
+      "_index-cc02163d.js"
+    ]
+  },
   "src/routes/random-restaurant/index.svelte": {
-    "file": "pages/random-restaurant/index.svelte-29f13d5c.js",
+    "file": "pages/random-restaurant/index.svelte-88884462.js",
     "src": "src/routes/random-restaurant/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-f64bfa0f.js",
-      "_common-06537ded.js",
-      "_index-cc02163d.js",
-      "_pureFunctionsAny.generated-2c69d3e9.js",
       "_env-6d58f0dd.js",
-      "__commonjsHelpers-7d66b65f.js"
-    ],
-    "css": [
-      "assets/pages/random-restaurant/index.svelte-3ba3f053.css"
+      "_common-e8a5ed7b.js",
+      "src/routes/random-place/index.svelte",
+      "_common-06537ded.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "__commonjsHelpers-7d66b65f.js",
+      "_index-cc02163d.js"
     ]
   },
   "src/routes/random-string/index.svelte": {
@@ -329,5 +380,8 @@
     "imports": [
       "__commonjsHelpers-7d66b65f.js"
     ]
+  },
+  "_common-e8a5ed7b.js": {
+    "file": "chunks/common-e8a5ed7b.js"
   }
 }
