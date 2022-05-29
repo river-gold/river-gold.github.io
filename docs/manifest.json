@@ -1,0 +1,6 @@
+{
+  "short_name": "온라인 도구모음",
+  "name": "온라인 도구모음",
+  "start_url": "/",
+  "display": "standalone"
+}
