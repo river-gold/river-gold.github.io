@@ -2,32 +2,81 @@
 <!--<html lang="ko_KR">-->
 <html>
 <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<meta http-equiv="content-security-policy" content=""><title>랜덤 카페</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu"><script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b80449d4addd48ecd99e17e7f2e9fb1&libraries=services" data-svelte="svelte-o9iq0q"></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        th {
+            white-space: nowrap;
+        }
+
+        td {
+            white-space: nowrap;
+        }
+
+        section#results {
+            margin-bottom: 0;
+        }
+
+        .two-input {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas:"one two";
+            grid-column-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        .two-input > :first-child {
+            grid-area: one;
+        }
+
+        .two-input > :last-child {
+            grid-area: two;
+        }
+
+        .three-input {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-areas:"one two three";
+            grid-column-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        .three-input > :first-child {
+            grid-area: one;
+        }
+
+        .three-input > :nth-child(2) {
+            grid-area: two;
+        }
+
+        .three-input > :last-child {
+            grid-area: three;
+        }
+    </style>
+    <meta http-equiv="content-security-policy" content=""><title>랜덤 카페</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu"><script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b80449d4addd48ecd99e17e7f2e9fb1&libraries=services" data-svelte="svelte-o9iq0q"></script>
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-8a01ad5d.css">
 	<link rel="stylesheet" href="/_app/assets/pages/menu.svelte-d2367542.css">
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
 	<link rel="stylesheet" href="/_app/assets/pages/random-place/index.svelte-9aaaa658.css">
-	<link rel="modulepreload" href="/_app/start-689b8e8c.js">
-	<link rel="modulepreload" href="/_app/chunks/index-f64bfa0f.js">
-	<link rel="modulepreload" href="/_app/chunks/index-cc02163d.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-103f30b8.js">
-	<link rel="modulepreload" href="/_app/pages/menu.svelte-2a973e0b.js">
-	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-91630a6f.js">
-	<link rel="modulepreload" href="/_app/pages/footer.svelte-9d454cf6.js">
-	<link rel="modulepreload" href="/_app/pages/main.svelte-adf7a301.js">
-	<link rel="modulepreload" href="/_app/pages/random-cafe/index.svelte-4541b04a.js">
+	<link rel="modulepreload" href="/_app/start-d5ee78e2.js">
+	<link rel="modulepreload" href="/_app/chunks/index-6fbcb9b6.js">
+	<link rel="modulepreload" href="/_app/chunks/index-1fcb1df1.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-432c927d.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-f5c1c602.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-487a7442.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-a63153ca.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-eb2166c5.js">
+	<link rel="modulepreload" href="/_app/pages/random-cafe/index.svelte-be489108.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/common-e8a5ed7b.js">
-	<link rel="modulepreload" href="/_app/pages/random-place/index.svelte-eb1c8c7c.js">
+	<link rel="modulepreload" href="/_app/pages/random-place/index.svelte-c824b522.js">
 	<link rel="modulepreload" href="/_app/chunks/common-06537ded.js">
 	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
 </head>
 <body>
-	
+
 
 
 
@@ -35,8 +84,8 @@
 <div class="container svelte-14pz54z"><menu class="svelte-19446wd"><nav class="svelte-19446wd"><h2 class="svelte-19446wd"><a href="/" class="svelte-19446wd">온라인 도구 모음</a></h2>
         <details open><summary class="svelte-19446wd">금융/투자/부동산</summary>
             <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/real-estate-rental-yield" class="svelte-19446wd">월세 수익률 계산기</a></li>
-                <li class="svelte-19446wd"><a sveltekit:prefetch href="/invest-revenue" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
-                <li class="svelte-19446wd"><a sveltekit:prefetch href="/invest-days" class="svelte-19446wd">예적금(투자) 기간 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-return" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-days" class="svelte-19446wd">예적금(투자) 기간 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/loan-interest" class="svelte-19446wd">대출 원리금 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-19446wd">LTV/DTI/DSR 계산기</a></li></ul></details>
         <details open><summary class="svelte-19446wd">랜덤/복권</summary>
@@ -69,10 +118,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="sjfa2m">
-		import { start } from "/_app/start-689b8e8c.js";
+		<script type="module" data-sveltekit-hydrate="i4ohu6">
+		import { start } from "/_app/start-d5ee78e2.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="sjfa2m"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="i4ohu6"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -82,8 +131,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-103f30b8.js"),
-						import("/_app/pages/random-cafe/index.svelte-4541b04a.js")
+					import("/_app/pages/__layout.svelte-432c927d.js"),
+						import("/_app/pages/random-cafe/index.svelte-be489108.js")
 				],
 				params: {},
 				routeId: "random-cafe"
