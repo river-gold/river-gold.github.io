@@ -58,15 +58,15 @@
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
-	<link rel="modulepreload" href="/_app/start-87440cc4.js">
-	<link rel="modulepreload" href="/_app/chunks/index-6fbcb9b6.js">
-	<link rel="modulepreload" href="/_app/chunks/index-1fcb1df1.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-432c927d.js">
-	<link rel="modulepreload" href="/_app/pages/menu.svelte-f5c1c602.js">
-	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-487a7442.js">
-	<link rel="modulepreload" href="/_app/pages/footer.svelte-a63153ca.js">
-	<link rel="modulepreload" href="/_app/pages/main.svelte-eb2166c5.js">
-	<link rel="modulepreload" href="/_app/pages/investment-days/index.svelte-2bbc6d7f.js">
+	<link rel="modulepreload" href="/_app/start-cda37e5e.js">
+	<link rel="modulepreload" href="/_app/chunks/index-24e30b88.js">
+	<link rel="modulepreload" href="/_app/chunks/index-dc90edf3.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-16181112.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-d5f4ea32.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-d252f94d.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-098666ef.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-322ad9cb.js">
+	<link rel="modulepreload" href="/_app/pages/investment-days/index.svelte-d3769571.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/dayjs.min-099b3022.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
@@ -84,6 +84,7 @@
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-return" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-days" class="svelte-19446wd current">예적금(투자) 기간 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/loan-interest" class="svelte-19446wd">대출 원리금 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-income" class="svelte-19446wd">배당 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-19446wd">LTV/DTI/DSR 계산기</a></li></ul></details>
         <details open><summary class="svelte-19446wd">랜덤/복권</summary>
             <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/random-string" class="svelte-19446wd">랜덤 문자열 생성기</a></li>
@@ -109,7 +110,7 @@
 
         <label for="interestRate">수익률(%)</label>
         <div class="two-input"><select name="interestExchangeType" id="interestExchangeType"><option value="yearly">연간</option><option value="monthly">월간</option><option value="daily">일간</option></select>
-            <input type="number" name="interestRate" id="interestRate" value="5"></div>
+            <input type="number" name="interestRate" id="interestRate" step="0.1" value="5"></div>
 
         <label for="interestRateType">이자 적용 방식</label>
         <select name="interestRateType" id="interestRateType"><option value="yearly_compound">연복리</option><option value="monthly_compound">월복리</option><option value="daily_compound">일복리</option><option value="simple">단리</option></select></form></section>
@@ -659,10 +660,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1qsvrp6">
-		import { start } from "/_app/start-87440cc4.js";
+		<script type="module" data-sveltekit-hydrate="2nqsjq">
+		import { start } from "/_app/start-cda37e5e.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1qsvrp6"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="2nqsjq"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -672,8 +673,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-432c927d.js"),
-						import("/_app/pages/investment-days/index.svelte-2bbc6d7f.js")
+					import("/_app/pages/__layout.svelte-16181112.js"),
+						import("/_app/pages/investment-days/index.svelte-d3769571.js")
 				],
 				params: {},
 				routeId: "investment-days"

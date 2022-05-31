@@ -58,16 +58,19 @@
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
-	<link rel="modulepreload" href="/_app/start-87440cc4.js">
-	<link rel="modulepreload" href="/_app/chunks/index-6fbcb9b6.js">
-	<link rel="modulepreload" href="/_app/chunks/index-1fcb1df1.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-432c927d.js">
-	<link rel="modulepreload" href="/_app/pages/menu.svelte-f5c1c602.js">
-	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-487a7442.js">
-	<link rel="modulepreload" href="/_app/pages/footer.svelte-a63153ca.js">
-	<link rel="modulepreload" href="/_app/pages/main.svelte-eb2166c5.js">
-	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-51de54a4.js">
+	<link rel="modulepreload" href="/_app/start-cda37e5e.js">
+	<link rel="modulepreload" href="/_app/chunks/index-24e30b88.js">
+	<link rel="modulepreload" href="/_app/chunks/index-dc90edf3.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-16181112.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-d5f4ea32.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-d252f94d.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-098666ef.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-322ad9cb.js">
+	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-64216e65.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
+	<link rel="modulepreload" href="/_app/chunks/common-191ff718.js">
+	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
+	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
 </head>
 <body>
 
@@ -81,6 +84,7 @@
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-return" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-days" class="svelte-19446wd">예적금(투자) 기간 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/loan-interest" class="svelte-19446wd">대출 원리금 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-income" class="svelte-19446wd current">배당 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-19446wd">LTV/DTI/DSR 계산기</a></li></ul></details>
         <details open><summary class="svelte-19446wd">랜덤/복권</summary>
             <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/random-string" class="svelte-19446wd">랜덤 문자열 생성기</a></li>
@@ -105,16 +109,311 @@
         <div class="two-input"><select name="roundType" id="roundType"><option value="yearly">매년</option><option value="monthly">매월</option></select>
             <input type="number" name="roundAmount" id="roundAmount" value="300"></div>
 
-        <label for="stockReturn">주식 수익률(%)</label>
-        <input type="number" name="stockReturn" id="stockReturn" value="6">
 
-        <div class="two-input"><label for="dividendYield">배당 연간 수익률(%) <input type="number" name="dividendYield" id="dividendYield" value="3"></label>
-            <label for="dividendGrowthRate">배당 연간 성장률(%) <input type="number" name="dividendGrowthRate" id="dividendGrowthRate" value="4"></label></div>
+
+        <div class="two-input"><label for="rateOfReturn">투자 수익률(%) <input type="number" name="rateOfReturn" id="rateOfReturn" step="0.1" value="6"></label>
+            <label for="dividendYield">배당 수익률(%) <input type="number" name="dividendYield" id="dividendYield" step="0.1" value="3"></label></div>
 
         <label for="dividendPeriod">배당주기
             (<input type="checkbox" id="dividendReinvestment" name="dividendReinvestment" checked><label for="dividendReinvestment">재투자)</label></label>
-        <select name="dividendPeriod" id="dividendPeriod"><option value="year">연배당</option><option value="quarter">분기배당</option><option value="month">월배당</option></select></form>
-</section>
+        <select name="dividendPeriod" id="dividendPeriod"><option value="year">연배당</option><option value="half">반기배당</option><option value="quarter">분기배당</option><option value="month">월배당</option></select></form></section>
+<section id="results"><figure><table><thead><tr><th scope="col">개월</th>
+                <th scope="col">원금</th>
+                <th scope="col">투자 자산</th>
+                <th scope="col">투자 수익률</th>
+                <th scope="col">배당금</th>
+                <th scope="col">누적 배당금</th>
+                <th scope="col">배당 연수익률</th>
+                <th scope="col">총 수익률</th></tr></thead>
+            <tbody><tr><th scope="row">1</th>
+                    <td>60,300</td>
+                    <td>60,593.51</td>
+                    <td>0.48</td>
+                    <td>150.75</td>
+                    <td>150.75</td>
+                    <td>3</td>
+                    <td>0.48</td>
+                </tr><tr><th scope="row">2</th>
+                    <td>60,600</td>
+                    <td>61,340.66</td>
+                    <td>1.22</td>
+                    <td>151.48</td>
+                    <td>302.23</td>
+                    <td>2.99</td>
+                    <td>1.22</td>
+                </tr><tr><th scope="row">3</th>
+                    <td>60,900</td>
+                    <td>62,092.18</td>
+                    <td>1.95</td>
+                    <td>153.35</td>
+                    <td>455.58</td>
+                    <td>3.02</td>
+                    <td>1.95</td>
+                </tr><tr><th scope="row">4</th>
+                    <td>61,200</td>
+                    <td>62,849.23</td>
+                    <td>2.69</td>
+                    <td>155.23</td>
+                    <td>610.81</td>
+                    <td>3.04</td>
+                    <td>2.69</td>
+                </tr><tr><th scope="row">5</th>
+                    <td>61,500</td>
+                    <td>63,611.84</td>
+                    <td>3.43</td>
+                    <td>157.12</td>
+                    <td>767.93</td>
+                    <td>3.06</td>
+                    <td>3.43</td>
+                </tr><tr><th scope="row">6</th>
+                    <td>61,800</td>
+                    <td>64,380.06</td>
+                    <td>4.17</td>
+                    <td>159.02</td>
+                    <td>926.96</td>
+                    <td>3.08</td>
+                    <td>4.17</td>
+                </tr><tr><th scope="row">7</th>
+                    <td>62,100</td>
+                    <td>65,153.93</td>
+                    <td>4.91</td>
+                    <td>160.95</td>
+                    <td>1,087.91</td>
+                    <td>3.11</td>
+                    <td>4.91</td>
+                </tr><tr><th scope="row">8</th>
+                    <td>62,400</td>
+                    <td>65,933.48</td>
+                    <td>5.66</td>
+                    <td>162.88</td>
+                    <td>1,250.8</td>
+                    <td>3.13</td>
+                    <td>5.66</td>
+                </tr><tr><th scope="row">9</th>
+                    <td>62,700</td>
+                    <td>66,718.76</td>
+                    <td>6.4</td>
+                    <td>164.83</td>
+                    <td>1,415.63</td>
+                    <td>3.15</td>
+                    <td>6.4</td>
+                </tr><tr><th scope="row">10</th>
+                    <td>63,000</td>
+                    <td>67,509.81</td>
+                    <td>7.15</td>
+                    <td>166.79</td>
+                    <td>1,582.43</td>
+                    <td>3.17</td>
+                    <td>7.15</td>
+                </tr><tr><th scope="row">11</th>
+                    <td>63,300</td>
+                    <td>68,306.67</td>
+                    <td>7.9</td>
+                    <td>168.77</td>
+                    <td>1,751.2</td>
+                    <td>3.19</td>
+                    <td>7.9</td>
+                </tr><tr><th scope="row">12</th>
+                    <td>63,600</td>
+                    <td>69,109.39</td>
+                    <td>8.66</td>
+                    <td>170.76</td>
+                    <td>1,921.97</td>
+                    <td>3.22</td>
+                    <td>8.66</td>
+                </tr><tr><th scope="row">13</th>
+                    <td>63,900</td>
+                    <td>69,918.01</td>
+                    <td>9.41</td>
+                    <td>172.77</td>
+                    <td>2,094.74</td>
+                    <td>3.24</td>
+                    <td>9.41</td>
+                </tr><tr><th scope="row">14</th>
+                    <td>64,200</td>
+                    <td>70,732.58</td>
+                    <td>10.17</td>
+                    <td>174.79</td>
+                    <td>2,269.54</td>
+                    <td>3.26</td>
+                    <td>10.17</td>
+                </tr><tr><th scope="row">15</th>
+                    <td>64,500</td>
+                    <td>71,553.13</td>
+                    <td>10.93</td>
+                    <td>176.83</td>
+                    <td>2,446.37</td>
+                    <td>3.28</td>
+                    <td>10.93</td>
+                </tr><tr><th scope="row">16</th>
+                    <td>64,800</td>
+                    <td>72,379.71</td>
+                    <td>11.69</td>
+                    <td>178.88</td>
+                    <td>2,625.25</td>
+                    <td>3.31</td>
+                    <td>11.69</td>
+                </tr><tr><th scope="row">17</th>
+                    <td>65,100</td>
+                    <td>73,212.36</td>
+                    <td>12.46</td>
+                    <td>180.94</td>
+                    <td>2,806.2</td>
+                    <td>3.33</td>
+                    <td>12.46</td>
+                </tr><tr><th scope="row">18</th>
+                    <td>65,400</td>
+                    <td>74,051.13</td>
+                    <td>13.22</td>
+                    <td>183.03</td>
+                    <td>2,989.23</td>
+                    <td>3.35</td>
+                    <td>13.22</td>
+                </tr><tr><th scope="row">19</th>
+                    <td>65,700</td>
+                    <td>74,896.07</td>
+                    <td>13.99</td>
+                    <td>185.12</td>
+                    <td>3,174.36</td>
+                    <td>3.38</td>
+                    <td>13.99</td>
+                </tr><tr><th scope="row">20</th>
+                    <td>66,000</td>
+                    <td>75,747.22</td>
+                    <td>14.76</td>
+                    <td>187.24</td>
+                    <td>3,361.6</td>
+                    <td>3.4</td>
+                    <td>14.76</td>
+                </tr><tr><th scope="row">21</th>
+                    <td>66,300</td>
+                    <td>76,604.63</td>
+                    <td>15.54</td>
+                    <td>189.36</td>
+                    <td>3,550.97</td>
+                    <td>3.42</td>
+                    <td>15.54</td>
+                </tr><tr><th scope="row">22</th>
+                    <td>66,600</td>
+                    <td>77,468.33</td>
+                    <td>16.31</td>
+                    <td>191.51</td>
+                    <td>3,742.48</td>
+                    <td>3.45</td>
+                    <td>16.31</td>
+                </tr><tr><th scope="row">23</th>
+                    <td>66,900</td>
+                    <td>78,338.38</td>
+                    <td>17.09</td>
+                    <td>193.67</td>
+                    <td>3,936.15</td>
+                    <td>3.47</td>
+                    <td>17.09</td>
+                </tr><tr><th scope="row">24</th>
+                    <td>67,200</td>
+                    <td>79,214.83</td>
+                    <td>17.87</td>
+                    <td>195.84</td>
+                    <td>4,132</td>
+                    <td>3.49</td>
+                    <td>17.87</td>
+                </tr><tr><th scope="row">25</th>
+                    <td>67,500</td>
+                    <td>80,097.72</td>
+                    <td>18.66</td>
+                    <td>198.03</td>
+                    <td>4,330.04</td>
+                    <td>3.52</td>
+                    <td>18.66</td>
+                </tr><tr><th scope="row">26</th>
+                    <td>67,800</td>
+                    <td>80,987.1</td>
+                    <td>19.45</td>
+                    <td>200.24</td>
+                    <td>4,530.28</td>
+                    <td>3.54</td>
+                    <td>19.45</td>
+                </tr><tr><th scope="row">27</th>
+                    <td>68,100</td>
+                    <td>81,883.01</td>
+                    <td>20.23</td>
+                    <td>202.46</td>
+                    <td>4,732.75</td>
+                    <td>3.56</td>
+                    <td>20.23</td>
+                </tr><tr><th scope="row">28</th>
+                    <td>68,400</td>
+                    <td>82,785.51</td>
+                    <td>21.03</td>
+                    <td>204.7</td>
+                    <td>4,937.45</td>
+                    <td>3.59</td>
+                    <td>21.03</td>
+                </tr><tr><th scope="row">29</th>
+                    <td>68,700</td>
+                    <td>83,694.64</td>
+                    <td>21.82</td>
+                    <td>206.96</td>
+                    <td>5,144.42</td>
+                    <td>3.61</td>
+                    <td>21.82</td>
+                </tr><tr><th scope="row">30</th>
+                    <td>69,000</td>
+                    <td>84,610.45</td>
+                    <td>22.62</td>
+                    <td>209.23</td>
+                    <td>5,353.66</td>
+                    <td>3.63</td>
+                    <td>22.62</td>
+                </tr><tr><th scope="row">31</th>
+                    <td>69,300</td>
+                    <td>85,532.99</td>
+                    <td>23.42</td>
+                    <td>211.52</td>
+                    <td>5,565.18</td>
+                    <td>3.66</td>
+                    <td>23.42</td>
+                </tr><tr><th scope="row">32</th>
+                    <td>69,600</td>
+                    <td>86,462.32</td>
+                    <td>24.22</td>
+                    <td>213.83</td>
+                    <td>5,779.01</td>
+                    <td>3.68</td>
+                    <td>24.22</td>
+                </tr><tr><th scope="row">33</th>
+                    <td>69,900</td>
+                    <td>87,398.47</td>
+                    <td>25.03</td>
+                    <td>216.15</td>
+                    <td>5,995.17</td>
+                    <td>3.71</td>
+                    <td>25.03</td>
+                </tr><tr><th scope="row">34</th>
+                    <td>70,200</td>
+                    <td>88,341.5</td>
+                    <td>25.84</td>
+                    <td>218.49</td>
+                    <td>6,213.67</td>
+                    <td>3.73</td>
+                    <td>25.84</td>
+                </tr><tr><th scope="row">35</th>
+                    <td>70,500</td>
+                    <td>89,291.46</td>
+                    <td>26.65</td>
+                    <td>220.85</td>
+                    <td>6,434.52</td>
+                    <td>3.75</td>
+                    <td>26.65</td>
+                </tr><tr><th scope="row">36</th>
+                    <td>70,800</td>
+                    <td>90,248.41</td>
+                    <td>27.46</td>
+                    <td>223.22</td>
+                    <td>6,657.75</td>
+                    <td>3.78</td>
+                    <td>27.46</td>
+                </tr></tbody></table></figure></section>
 </main>
     <footer class="svelte-1j6maev">Copyright © 2022 River. All rights reserved.
 </footer></div>
@@ -127,10 +426,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1x1iev0">
-		import { start } from "/_app/start-87440cc4.js";
+		<script type="module" data-sveltekit-hydrate="1hnl9ii">
+		import { start } from "/_app/start-cda37e5e.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1x1iev0"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1hnl9ii"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -140,8 +439,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-432c927d.js"),
-						import("/_app/pages/dividend-income/index.svelte-51de54a4.js")
+					import("/_app/pages/__layout.svelte-16181112.js"),
+						import("/_app/pages/dividend-income/index.svelte-64216e65.js")
 				],
 				params: {},
 				routeId: "dividend-income"
