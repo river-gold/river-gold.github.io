@@ -58,7 +58,7 @@
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
-	<link rel="modulepreload" href="/_app/start-10181e18.js">
+	<link rel="modulepreload" href="/_app/start-311de1e9.js">
 	<link rel="modulepreload" href="/_app/chunks/index-297a1277.js">
 	<link rel="modulepreload" href="/_app/chunks/index-34260aba.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-71a882db.js">
@@ -66,7 +66,7 @@
 	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-36a483ea.js">
 	<link rel="modulepreload" href="/_app/pages/footer.svelte-5b1e2c1a.js">
 	<link rel="modulepreload" href="/_app/pages/main.svelte-a4ed1b71.js">
-	<link rel="modulepreload" href="/_app/pages/loan-interest/index.svelte-bd19041d.js">
+	<link rel="modulepreload" href="/_app/pages/loan-interest/index.svelte-83c8ded5.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/index-d1457323.js">
 	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
@@ -98,9 +98,11 @@
     <main class="svelte-vryusu">
 
 <h1>대출 원리금 계산기</h1>
-<section id="form"><form><div class="three-input"><label for="interestRate">대출 연금리(%) <input type="number" name="interestRate" id="interestRate" step="0.1" value="5"></label>
-            <label for="principal">대출 금액(만원) <input type="number" name="principal" id="principal" value="10000"></label>
-            <label for="gracePeriod">거치기간(월) <input type="number" name="gracePeriod" id="gracePeriod" value="6"></label></div>
+<section id="form"><form><div class="two-input"><label for="interestRate">대출 연금리(%) <input type="number" name="interestRate" id="interestRate" step="0.1" value="5"></label>
+            <label for="principal">대출 금액(만원) <input type="number" name="principal" id="principal" value="10000"></label></div>
+
+        <label for="gracePeriod">거치기간(월)</label>
+        <input type="number" name="gracePeriod" id="gracePeriod" value="6">
 
         <div class="two-input"><label for="repaymentType">상환방식
                 <select name="" id="repaymentType"><option value="equalPrincipalAndInterest">원리금균등</option><option value="equalPrincipal">원금균등</option><option value="grace">거치식</option></select></label>
@@ -368,10 +370,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="ay3b9f">
-		import { start } from "/_app/start-10181e18.js";
+		<script type="module" data-sveltekit-hydrate="c0q069">
+		import { start } from "/_app/start-311de1e9.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="ay3b9f"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="c0q069"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -382,7 +384,7 @@
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-71a882db.js"),
-						import("/_app/pages/loan-interest/index.svelte-bd19041d.js")
+						import("/_app/pages/loan-interest/index.svelte-83c8ded5.js")
 				],
 				params: {},
 				routeId: "loan-interest"
