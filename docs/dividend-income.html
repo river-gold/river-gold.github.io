@@ -58,18 +58,18 @@
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
-	<link rel="modulepreload" href="/_app/start-311de1e9.js">
-	<link rel="modulepreload" href="/_app/chunks/index-297a1277.js">
-	<link rel="modulepreload" href="/_app/chunks/index-34260aba.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-71a882db.js">
-	<link rel="modulepreload" href="/_app/pages/menu.svelte-67338cfc.js">
-	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-36a483ea.js">
-	<link rel="modulepreload" href="/_app/pages/footer.svelte-5b1e2c1a.js">
-	<link rel="modulepreload" href="/_app/pages/main.svelte-a4ed1b71.js">
-	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-8b95841c.js">
+	<link rel="modulepreload" href="/_app/start-c258d3d4.js">
+	<link rel="modulepreload" href="/_app/chunks/index-7770d67f.js">
+	<link rel="modulepreload" href="/_app/chunks/index-da79579d.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-87fe0962.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-3d9554e0.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-5458fc39.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-8f67801c.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-dbdeb7d1.js">
+	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-2b067dbc.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/common-542bc63a.js">
-	<link rel="modulepreload" href="/_app/chunks/index-d1457323.js">
+	<link rel="modulepreload" href="/_app/chunks/index-c692679a.js">
 	<link rel="modulepreload" href="/_app/chunks/pureFunctionsAny.generated-2c69d3e9.js">
 	<link rel="modulepreload" href="/_app/chunks/_commonjsHelpers-7d66b65f.js">
 </head>
@@ -115,9 +115,10 @@
         <div class="two-input"><label for="rateOfReturn">투자 수익률(%) <input type="number" name="rateOfReturn" id="rateOfReturn" step="0.1" value="6"></label>
             <label for="dividendYield">배당 수익률(%) <input type="number" name="dividendYield" id="dividendYield" step="0.1" value="3"></label></div>
 
-        <label for="dividendPeriod">배당주기
-            (<input type="checkbox" id="dividendReinvestment" name="dividendReinvestment" checked><label for="dividendReinvestment">재투자)</label></label>
-        <select name="dividendPeriod" id="dividendPeriod"><option value="year">연배당</option><option value="half">반기배당</option><option value="quarter">분기배당</option><option value="month">월배당</option></select></form></section>
+        <div class="two-input"><label for="dividendPeriod">배당주기
+                <select name="dividendPeriod" id="dividendPeriod"><option value="year">연배당</option><option value="half">반기배당</option><option value="quarter">분기배당</option><option value="month">월배당</option></select></label>
+            <label for="dividendReinvestmentRatio"><input type="checkbox" id="dividendReinvestment" name="dividendReinvestment" checked><label for="dividendReinvestment">재투자 비율(%)</label>
+                <input type="number" name="dividendReinvestmentRatio" id="dividendReinvestmentRatio" step="1" min="0" max="100" value="50"></label></div></form></section>
 <section id="results"><figure><table><thead><tr><th scope="col">개월</th>
                 <th scope="col">원금</th>
                 <th scope="col">투자 자산</th>
@@ -427,10 +428,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1fpz68z">
-		import { start } from "/_app/start-311de1e9.js";
+		<script type="module" data-sveltekit-hydrate="7z64fa">
+		import { start } from "/_app/start-c258d3d4.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1fpz68z"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="7z64fa"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -440,8 +441,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-71a882db.js"),
-						import("/_app/pages/dividend-income/index.svelte-8b95841c.js")
+					import("/_app/pages/__layout.svelte-87fe0962.js"),
+						import("/_app/pages/dividend-income/index.svelte-2b067dbc.js")
 				],
 				params: {},
 				routeId: "dividend-income"
