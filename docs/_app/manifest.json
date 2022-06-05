@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-73c561e9.js",
+    "file": "start-3e722a38.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,14 +27,13 @@
       "src/routes/mobile-navi.svelte",
       "src/routes/random-cafe/index.svelte",
       "src/routes/random-cultural/index.svelte",
-      "src/routes/random-place/index.svelte",
       "src/routes/random-restaurant/index.svelte",
       "src/routes/random-string/index.svelte",
       "src/routes/real-estate-rental-yield/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-87fe0962.js",
+    "file": "pages/__layout.svelte-60dc77ec.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -50,7 +49,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-3d9554e0.js",
+    "file": "pages/menu.svelte-7cb2ec45.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -123,7 +122,7 @@
     ]
   },
   "src/routes/dividend-income/index.svelte": {
-    "file": "pages/dividend-income/index.svelte-2b067dbc.js",
+    "file": "pages/dividend-income/index.svelte-f07e1dac.js",
     "src": "src/routes/dividend-income/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -138,7 +137,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-8114445e.js",
+    "file": "pages/index.svelte-9d3ede6b.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -279,48 +278,29 @@
     ]
   },
   "src/routes/random-cafe/index.svelte": {
-    "file": "pages/random-cafe/index.svelte-cfd50d57.js",
+    "file": "pages/random-cafe/index.svelte-3924f354.js",
     "src": "src/routes/random-cafe/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7770d67f.js",
       "_env-6d58f0dd.js",
-      "_common-e8a5ed7b.js",
-      "src/routes/random-place/index.svelte",
+      "_index-925a4381.js",
       "_common-542bc63a.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
       "__commonjsHelpers-7d66b65f.js",
       "_index-da79579d.js"
     ]
   },
-  "src/routes/random-place/index.svelte": {
-    "file": "pages/random-place/index.svelte-73ba4706.js",
-    "src": "src/routes/random-place/index.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-7770d67f.js",
-      "_env-6d58f0dd.js",
-      "_common-542bc63a.js",
-      "_pureFunctionsAny.generated-2c69d3e9.js",
-      "_index-da79579d.js",
-      "__commonjsHelpers-7d66b65f.js"
-    ],
-    "css": [
-      "assets/pages/random-place/index.svelte-aac09286.css"
-    ]
-  },
   "src/routes/random-cultural/index.svelte": {
-    "file": "pages/random-cultural/index.svelte-d33227f6.js",
+    "file": "pages/random-cultural/index.svelte-a2df32bb.js",
     "src": "src/routes/random-cultural/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7770d67f.js",
       "_env-6d58f0dd.js",
-      "_common-e8a5ed7b.js",
-      "src/routes/random-place/index.svelte",
+      "_index-925a4381.js",
       "_common-542bc63a.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
       "__commonjsHelpers-7d66b65f.js",
@@ -328,15 +308,14 @@
     ]
   },
   "src/routes/random-restaurant/index.svelte": {
-    "file": "pages/random-restaurant/index.svelte-b49f9c1a.js",
+    "file": "pages/random-restaurant/index.svelte-f9867927.js",
     "src": "src/routes/random-restaurant/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7770d67f.js",
       "_env-6d58f0dd.js",
-      "_common-e8a5ed7b.js",
-      "src/routes/random-place/index.svelte",
+      "_index-925a4381.js",
       "_common-542bc63a.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
       "__commonjsHelpers-7d66b65f.js",
@@ -419,7 +398,17 @@
       "__commonjsHelpers-7d66b65f.js"
     ]
   },
-  "_common-e8a5ed7b.js": {
-    "file": "chunks/common-e8a5ed7b.js"
+  "_index-925a4381.js": {
+    "file": "chunks/index-925a4381.js",
+    "imports": [
+      "_index-7770d67f.js",
+      "_env-6d58f0dd.js",
+      "_common-542bc63a.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "_index-da79579d.js"
+    ],
+    "css": [
+      "assets/index-5c01d16a.css"
+    ]
   }
 }

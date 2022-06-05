@@ -52,21 +52,21 @@
             grid-area: three;
         }
     </style>
-    <meta http-equiv="content-security-policy" content=""><title>배당 수익 계산기</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu">
+    <meta http-equiv="content-security-policy" content=""><title>주식 배당금 수익 계산기</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-716919f5.css">
 	<link rel="stylesheet" href="/_app/assets/pages/menu.svelte-d2367542.css">
 	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
-	<link rel="modulepreload" href="/_app/start-73c561e9.js">
+	<link rel="modulepreload" href="/_app/start-3e722a38.js">
 	<link rel="modulepreload" href="/_app/chunks/index-7770d67f.js">
 	<link rel="modulepreload" href="/_app/chunks/index-da79579d.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-87fe0962.js">
-	<link rel="modulepreload" href="/_app/pages/menu.svelte-3d9554e0.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-60dc77ec.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-7cb2ec45.js">
 	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-5458fc39.js">
 	<link rel="modulepreload" href="/_app/pages/footer.svelte-8f67801c.js">
 	<link rel="modulepreload" href="/_app/pages/main.svelte-dbdeb7d1.js">
-	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-2b067dbc.js">
+	<link rel="modulepreload" href="/_app/pages/dividend-income/index.svelte-f07e1dac.js">
 	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
 	<link rel="modulepreload" href="/_app/chunks/common-542bc63a.js">
 	<link rel="modulepreload" href="/_app/chunks/index-c692679a.js">
@@ -85,7 +85,7 @@
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-return" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-days" class="svelte-19446wd">예적금(투자) 기간 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/loan-interest" class="svelte-19446wd">대출 원리금 계산기</a></li>
-                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-income" class="svelte-19446wd current">배당 수익 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-income" class="svelte-19446wd current">주식 배당금 수익 계산기</a></li>
                 <li class="svelte-19446wd"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-19446wd">LTV/DTI/DSR 계산기</a></li></ul></details>
         <details open><summary class="svelte-19446wd">랜덤/복권</summary>
             <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/random-string" class="svelte-19446wd">랜덤 문자열 생성기</a></li>
@@ -98,7 +98,7 @@
 </menu>
     <main class="svelte-vryusu">
 
-<h1>배당 수익 계산기</h1>
+<h1>주식 배당금 수익 계산기</h1>
 
 <section id="form"><form><label for="initAmount" class="amount">초기 투자금(만원)</label>
         <input type="number" name="initAmount" id="initAmount" value="60000">
@@ -109,8 +109,6 @@
         <label for="roundAmount">매회 투자금(만원)</label>
         <div class="two-input"><select name="roundType" id="roundType"><option value="yearly">매년</option><option value="monthly">매월</option></select>
             <input type="number" name="roundAmount" id="roundAmount" value="300"></div>
-
-
 
         <div class="two-input"><label for="rateOfReturn">투자 수익률(%) <input type="number" name="rateOfReturn" id="rateOfReturn" step="0.1" value="6"></label>
             <label for="dividendYield">배당 수익률(%) <input type="number" name="dividendYield" id="dividendYield" step="0.1" value="3"></label></div>
@@ -428,10 +426,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="7z64fa">
-		import { start } from "/_app/start-73c561e9.js";
+		<script type="module" data-sveltekit-hydrate="1pv8gzq">
+		import { start } from "/_app/start-3e722a38.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="7z64fa"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1pv8gzq"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,
@@ -441,8 +439,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-87fe0962.js"),
-						import("/_app/pages/dividend-income/index.svelte-2b067dbc.js")
+					import("/_app/pages/__layout.svelte-60dc77ec.js"),
+						import("/_app/pages/dividend-income/index.svelte-f07e1dac.js")
 				],
 				params: {},
 				routeId: "dividend-income"
