@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8bc061e8.js",
+    "file": "start-d884d243.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,6 +11,7 @@
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/counter/index.svelte",
+      "src/routes/dividend-days/index.svelte",
       "src/routes/dividend-income/index.svelte",
       "src/routes/footer.svelte",
       "src/routes/index.svelte",
@@ -33,7 +34,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-60dc77ec.js",
+    "file": "pages/__layout.svelte-2f21fe53.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -49,7 +50,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-7cb2ec45.js",
+    "file": "pages/menu.svelte-0eea5a24.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -121,23 +122,42 @@
       "assets/pages/counter/index.svelte-439297a1.css"
     ]
   },
+  "src/routes/dividend-days/index.svelte": {
+    "file": "pages/dividend-days/index.svelte-e004ad1a.js",
+    "src": "src/routes/dividend-days/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-7770d67f.js",
+      "_env-6d58f0dd.js",
+      "_dividend-calc-842a9b75.js",
+      "_index-c692679a.js",
+      "_dayjs.min-099b3022.js",
+      "_duration-18666005.js",
+      "_pureFunctionsAny.generated-2c69d3e9.js",
+      "_common-8e754978.js",
+      "_index-da79579d.js",
+      "__commonjsHelpers-7d66b65f.js"
+    ]
+  },
   "src/routes/dividend-income/index.svelte": {
-    "file": "pages/dividend-income/index.svelte-20973af0.js",
+    "file": "pages/dividend-income/index.svelte-0f483abb.js",
     "src": "src/routes/dividend-income/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7770d67f.js",
       "_env-6d58f0dd.js",
-      "_common-8e754978.js",
+      "_dividend-calc-842a9b75.js",
       "_index-c692679a.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
+      "_common-8e754978.js",
       "_index-da79579d.js",
       "__commonjsHelpers-7d66b65f.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-9d3ede6b.js",
+    "file": "pages/index.svelte-52dd7ab7.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -150,18 +170,19 @@
     ]
   },
   "src/routes/investment-days/index.svelte": {
-    "file": "pages/investment-days/index.svelte-42bf1d4d.js",
+    "file": "pages/investment-days/index.svelte-d2b03483.js",
     "src": "src/routes/investment-days/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7770d67f.js",
       "_env-6d58f0dd.js",
-      "_dayjs.min-099b3022.js",
       "_index-c692679a.js",
+      "_dayjs.min-099b3022.js",
+      "_duration-18666005.js",
       "_pureFunctionsAny.generated-2c69d3e9.js",
-      "__commonjsHelpers-7d66b65f.js",
-      "_index-da79579d.js"
+      "_index-da79579d.js",
+      "__commonjsHelpers-7d66b65f.js"
     ]
   },
   "src/routes/investment-return/index.svelte": {
@@ -369,6 +390,26 @@
       "_index-7770d67f.js"
     ]
   },
+  "_dividend-calc-842a9b75.js": {
+    "file": "chunks/dividend-calc-842a9b75.js",
+    "imports": [
+      "_common-8e754978.js",
+      "_index-c692679a.js",
+      "_index-7770d67f.js"
+    ]
+  },
+  "_dayjs.min-099b3022.js": {
+    "file": "chunks/dayjs.min-099b3022.js",
+    "imports": [
+      "__commonjsHelpers-7d66b65f.js"
+    ]
+  },
+  "_duration-18666005.js": {
+    "file": "chunks/duration-18666005.js",
+    "imports": [
+      "__commonjsHelpers-7d66b65f.js"
+    ]
+  },
   "_pureFunctionsAny.generated-2c69d3e9.js": {
     "file": "chunks/pureFunctionsAny.generated-2c69d3e9.js",
     "imports": [
@@ -377,12 +418,6 @@
   },
   "__commonjsHelpers-7d66b65f.js": {
     "file": "chunks/_commonjsHelpers-7d66b65f.js"
-  },
-  "_dayjs.min-099b3022.js": {
-    "file": "chunks/dayjs.min-099b3022.js",
-    "imports": [
-      "__commonjsHelpers-7d66b65f.js"
-    ]
   },
   "_store-1df66b9b.js": {
     "file": "chunks/store-1df66b9b.js",
