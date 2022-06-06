@@ -59,22 +59,14 @@
         }(window, '83ce8261'));
     </script>
     <script async src="https://d-collect.jennifersoft.com/83ce8261/demian.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
     <script>
         // 더블탭으로 확대 방지
-        document.documentElement.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, false);
-
-        let lastTouchEnd = 0;
-
-        document.documentElement.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            } lastTouchEnd = now;
-        }, false);
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
     </script>
     <meta http-equiv="content-security-policy" content=""><title>로또 번호 생성기</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-716919f5.css">
@@ -85,7 +77,7 @@
 	<link rel="stylesheet" href="/_app/assets/pages/lotto/results-lotto-numbers.svelte-7f966bd5.css">
 	<link rel="stylesheet" href="/_app/assets/pages/lotto/lotto-number.svelte-c80a053c.css">
 	<link rel="stylesheet" href="/_app/assets/pages/lotto/lotto-numbers.svelte-bd3aa565.css">
-	<link rel="modulepreload" href="/_app/start-54418e6d.js">
+	<link rel="modulepreload" href="/_app/start-8bc061e8.js">
 	<link rel="modulepreload" href="/_app/chunks/index-7770d67f.js">
 	<link rel="modulepreload" href="/_app/chunks/index-da79579d.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-60dc77ec.js">
@@ -235,70 +227,70 @@
 </table>
 <br>
 <section id="results" class="svelte-xdqcwo"><button id="refresh" role="button" class="svelte-xdqcwo">재생성</button>
-    <button id="copy" role="button" data-clipboard-text="6,27,28,32,38,43\r\n8,10,11,31,41,42\r\n5,23,34,37,40,44\r\n9,12,18,24,26,45\r\n3,4,14,15,16,25" class="svelte-xdqcwo">복사</button>
-    <table class="svelte-xdqcwo"><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">6
+    <button id="copy" role="button" data-clipboard-text="2,16,21,28,30,39\r\n18,22,24,32,36,38\r\n5,7,12,15,20,44\r\n1,4,8,13,14,42\r\n10,23,26,35,40,41" class="svelte-xdqcwo">복사</button>
+    <table class="svelte-xdqcwo"><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">2
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">27
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">16
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">21
 </span>
                     </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">28
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">32
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">30
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">38
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">43
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">39
 </span>
                     </td>
-            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">8
+            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">18
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">10
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">22
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">11
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">24
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">31
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">32
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">41
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">36
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">42
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">38
 </span>
                     </td>
             </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">5
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">23
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">7
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">34
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">12
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">37
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">15
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">40
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">20
 </span>
                     </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">44
 </span>
                     </td>
-            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">9
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">12
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">18
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">24
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">26
-</span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">45
-</span>
-                    </td>
-            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">3
+            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">1
 </span>
                     </td><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">4
 </span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">8
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">13
+</span>
                     </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">14
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">15
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">42
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number blue none svelte-17dos6f" ondragstart="return false">16
+                    </td>
+            </tr><tr><td class="svelte-xdqcwo"><span class="lotto-number yellow none svelte-17dos6f" ondragstart="return false">10
 </span>
-                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">25
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">23
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number red none svelte-17dos6f" ondragstart="return false">26
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">35
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number gray none svelte-17dos6f" ondragstart="return false">40
+</span>
+                    </td><td class="svelte-xdqcwo"><span class="lotto-number green none svelte-17dos6f" ondragstart="return false">41
 </span>
                     </td>
             </tr></table>
@@ -316,10 +308,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="njijob">
-		import { start } from "/_app/start-54418e6d.js";
+		<script type="module" data-sveltekit-hydrate="a0qh6e">
+		import { start } from "/_app/start-8bc061e8.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="njijob"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="a0qh6e"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,

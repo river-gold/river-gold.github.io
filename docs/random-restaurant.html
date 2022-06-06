@@ -59,22 +59,14 @@
         }(window, '83ce8261'));
     </script>
     <script async src="https://d-collect.jennifersoft.com/83ce8261/demian.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
     <script>
         // 더블탭으로 확대 방지
-        document.documentElement.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, false);
-
-        let lastTouchEnd = 0;
-
-        document.documentElement.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            } lastTouchEnd = now;
-        }, false);
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
     </script>
     <meta http-equiv="content-security-policy" content=""><title>랜덤 음식점</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu"><script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b80449d4addd48ecd99e17e7f2e9fb1&libraries=services" data-svelte="svelte-o9iq0q"></script>
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-716919f5.css">
@@ -83,7 +75,7 @@
 	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
 	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
 	<link rel="stylesheet" href="/_app/assets/index-5c01d16a.css">
-	<link rel="modulepreload" href="/_app/start-54418e6d.js">
+	<link rel="modulepreload" href="/_app/start-8bc061e8.js">
 	<link rel="modulepreload" href="/_app/chunks/index-7770d67f.js">
 	<link rel="modulepreload" href="/_app/chunks/index-da79579d.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-60dc77ec.js">
@@ -143,7 +135,7 @@
 
 
 		<script type="module" data-sveltekit-hydrate="4ph4il">
-		import { start } from "/_app/start-54418e6d.js";
+		import { start } from "/_app/start-8bc061e8.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="4ph4il"]').parentNode,
 			paths: {"base":"","assets":""},
