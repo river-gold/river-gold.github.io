@@ -1,0 +1,174 @@
+<!doctype html>
+<!--<html lang="ko_KR">-->
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        th {
+            white-space: nowrap;
+        }
+
+        td {
+            white-space: nowrap;
+        }
+
+        section#results {
+            margin-bottom: 0;
+        }
+
+        .two-input {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas:"one two";
+            grid-column-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        .two-input > :first-child {
+            grid-area: one;
+        }
+
+        .two-input > :last-child {
+            grid-area: two;
+        }
+
+        .three-input {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-areas:"one two three";
+            grid-column-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        .three-input > :first-child {
+            grid-area: one;
+        }
+
+        .three-input > :nth-child(2) {
+            grid-area: two;
+        }
+
+        .three-input > :last-child {
+            grid-area: three;
+        }
+    </style>
+    <script>
+        (function(j,ennifer) {
+            j['dmndata']=[];j['jenniferFront']=function(args){window.dmndata.push(args)};
+            j['dmnaid']=ennifer;j['dmnatime']=new Date();j['dmnanocookie']=false;j['dmnajennifer']='JENNIFER_FRONT@INTG';
+        }(window, '83ce8261'));
+    </script>
+    <script async src="https://d-collect.jennifersoft.com/83ce8261/demian.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+    <script>
+        // 더블탭으로 확대 방지
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+    </script>
+    <meta http-equiv="content-security-policy" content=""><title>멀티 타이머</title><link rel="manifest" href="/manifest.json" data-svelte="svelte-10ug0yu"><meta name="mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><meta name="apple-mobile-web-app-capable" content="yes" data-svelte="svelte-10ug0yu"><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" type="text/css" data-svelte="svelte-10ug0yu">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-716919f5.css">
+	<link rel="stylesheet" href="/_app/assets/pages/menu.svelte-d2367542.css">
+	<link rel="stylesheet" href="/_app/assets/pages/mobile-navi.svelte-567b7393.css">
+	<link rel="stylesheet" href="/_app/assets/pages/footer.svelte-afd71047.css">
+	<link rel="stylesheet" href="/_app/assets/pages/main.svelte-6f375414.css">
+	<link rel="stylesheet" href="/_app/assets/pages/multi-timer/index.svelte-75da505a.css">
+	<link rel="modulepreload" href="/_app/start-24bee896.js">
+	<link rel="modulepreload" href="/_app/chunks/index-7770d67f.js">
+	<link rel="modulepreload" href="/_app/chunks/index-da79579d.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c7092792.js">
+	<link rel="modulepreload" href="/_app/pages/menu.svelte-0ea130d1.js">
+	<link rel="modulepreload" href="/_app/pages/mobile-navi.svelte-5458fc39.js">
+	<link rel="modulepreload" href="/_app/pages/footer.svelte-8f67801c.js">
+	<link rel="modulepreload" href="/_app/pages/main.svelte-dbdeb7d1.js">
+	<link rel="modulepreload" href="/_app/pages/multi-timer/index.svelte-dd3e4683.js">
+	<link rel="modulepreload" href="/_app/chunks/env-6d58f0dd.js">
+	<link rel="modulepreload" href="/_app/chunks/index-c692679a.js">
+</head>
+<body>
+
+
+
+
+
+<div class="container svelte-zjani0"><menu class="svelte-19446wd"><nav class="svelte-19446wd"><h2 class="svelte-19446wd"><a href="/" class="svelte-19446wd">온라인 도구 모음</a></h2>
+        <details open><summary class="svelte-19446wd">금융/투자/부동산</summary>
+            <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/real-estate-rental-yield" class="svelte-19446wd">월세 수익률 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-return" class="svelte-19446wd">예적금(투자) 수익 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/investment-days" class="svelte-19446wd">예적금(투자) 기간 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/loan-interest" class="svelte-19446wd">대출 원리금 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-income" class="svelte-19446wd">주식 배당금 수익 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/dividend-days" class="svelte-19446wd">목표 배당금 기간 계산기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/ltv-dti-dsr" class="svelte-19446wd">LTV/DTI/DSR 계산기</a></li></ul></details>
+        <details open><summary class="svelte-19446wd">랜덤/복권</summary>
+            <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/random-string" class="svelte-19446wd">랜덤 문자열 생성기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/lotto" class="svelte-19446wd">로또 번호 생성기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/random-restaurant" class="svelte-19446wd">랜덤 음식점</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/random-cafe" class="svelte-19446wd">랜덤 카페</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/random-cultural" class="svelte-19446wd">랜덤 문화시설</a></li></ul></details>
+        <details open><summary class="svelte-19446wd">기타</summary>
+            <ul class="svelte-19446wd"><li class="svelte-19446wd"><a sveltekit:prefetch href="/counter" class="svelte-19446wd">수동 계수기</a></li>
+                <li class="svelte-19446wd"><a sveltekit:prefetch href="/multi-timer" class="svelte-19446wd">멀티 타이머</a></li></ul></details></nav>
+</menu>
+    <main class="svelte-vryusu">
+
+<h1>멀티 타이머</h1>
+
+<section id="form"><form id="timer" class="svelte-2fs9yv"><div class="three-input"><button id="start" type="button">시작</button>
+            <button id="stop" type="button">중지</button>
+            <button id="clear" type="button">초기화</button></div>
+        <div class="five-input svelte-2fs9yv"><input type="text" id="hour" name="hour" value="0"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv">:</span>
+                <input type="text" id="minute" name="minute" value="0"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv">:</span>
+                <input type="text" id="second" name="second" value="10"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv"></span>
+                <button type="button">-</button>
+            </div><div class="five-input svelte-2fs9yv"><input type="text" id="hour" name="hour" value="0"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv">:</span>
+                <input type="text" id="minute" name="minute" value="1"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv">:</span>
+                <input type="text" id="second" name="second" value="0"  class="svelte-2fs9yv">
+                <span class="colon svelte-2fs9yv"></span>
+                <button type="button">-</button>
+            </div>
+        <button id="add" type="button">추가</button></form>
+    <audio src="/alarm.mp3" id="alarm" loop="loop"></audio>
+</section>
+</main>
+    <footer class="svelte-1j6maev">Copyright © 2022 River. All rights reserved.
+</footer></div>
+
+<div id="mobile-navi" class="svelte-14dqvfb"><div id="hamburger" class="svelte-14dqvfb" style="display: block;"><span class="svelte-14dqvfb"></span>
+        <span class="svelte-14dqvfb"></span>
+        <span class="svelte-14dqvfb"></span></div>
+    <div id="hamburgerX" class="svelte-14dqvfb" style="display: none;">X
+    </div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="n4ijvk">
+		import { start } from "/_app/start-24bee896.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="n4ijvk"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c7092792.js"),
+						import("/_app/pages/multi-timer/index.svelte-dd3e4683.js")
+				],
+				params: {},
+				routeId: "multi-timer"
+			}
+		});
+	</script>
+</body>
+</html>
