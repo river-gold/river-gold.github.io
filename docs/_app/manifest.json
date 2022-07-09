@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-eede3a46.js",
+    "file": "start-e6ad581d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -35,7 +35,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-765aeeb2.js",
+    "file": "pages/__layout.svelte-5884e9ef.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -51,7 +51,7 @@
     ]
   },
   "src/routes/menu.svelte": {
-    "file": "pages/menu.svelte-5d19debe.js",
+    "file": "pages/menu.svelte-d4f1c4ea.js",
     "src": "src/routes/menu.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -108,7 +108,7 @@
     ]
   },
   "src/routes/counter/index.svelte": {
-    "file": "pages/counter/index.svelte-79cecbb5.js",
+    "file": "pages/counter/index.svelte-267aaf9a.js",
     "src": "src/routes/counter/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -124,7 +124,7 @@
     ]
   },
   "src/routes/dividend-days/index.svelte": {
-    "file": "pages/dividend-days/index.svelte-ce911e5b.js",
+    "file": "pages/dividend-days/index.svelte-f640365b.js",
     "src": "src/routes/dividend-days/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -142,7 +142,7 @@
     ]
   },
   "src/routes/dividend-income/index.svelte": {
-    "file": "pages/dividend-income/index.svelte-cdeafd2e.js",
+    "file": "pages/dividend-income/index.svelte-eca75795.js",
     "src": "src/routes/dividend-income/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -158,7 +158,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-604314c8.js",
+    "file": "pages/index.svelte-6d9dcea7.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -171,7 +171,7 @@
     ]
   },
   "src/routes/investment-days/index.svelte": {
-    "file": "pages/investment-days/index.svelte-fd64993b.js",
+    "file": "pages/investment-days/index.svelte-11eeeb01.js",
     "src": "src/routes/investment-days/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -187,7 +187,7 @@
     ]
   },
   "src/routes/investment-return/index.svelte": {
-    "file": "pages/investment-return/index.svelte-7cc11fc3.js",
+    "file": "pages/investment-return/index.svelte-a1b61cb0.js",
     "src": "src/routes/investment-return/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -202,7 +202,7 @@
     ]
   },
   "src/routes/loan-interest/index.svelte": {
-    "file": "pages/loan-interest/index.svelte-d0dba0ff.js",
+    "file": "pages/loan-interest/index.svelte-f0f49945.js",
     "src": "src/routes/loan-interest/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -216,7 +216,7 @@
     ]
   },
   "src/routes/lotto/index.svelte": {
-    "file": "pages/lotto/index.svelte-fd34a556.js",
+    "file": "pages/lotto/index.svelte-91e98f90.js",
     "src": "src/routes/lotto/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -283,7 +283,7 @@
     ]
   },
   "src/routes/ltv-dti-dsr/index.svelte": {
-    "file": "pages/ltv-dti-dsr/index.svelte-00bf27cd.js",
+    "file": "pages/ltv-dti-dsr/index.svelte-19163fd1.js",
     "src": "src/routes/ltv-dti-dsr/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -300,7 +300,7 @@
     ]
   },
   "src/routes/multi-timer/index.svelte": {
-    "file": "pages/multi-timer/index.svelte-12f10320.js",
+    "file": "pages/multi-timer/index.svelte-1703cf68.js",
     "src": "src/routes/multi-timer/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -315,7 +315,7 @@
     ]
   },
   "src/routes/random-cafe/index.svelte": {
-    "file": "pages/random-cafe/index.svelte-9861d73c.js",
+    "file": "pages/random-cafe/index.svelte-5ce51924.js",
     "src": "src/routes/random-cafe/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -330,7 +330,7 @@
     ]
   },
   "src/routes/random-cultural/index.svelte": {
-    "file": "pages/random-cultural/index.svelte-1b72868f.js",
+    "file": "pages/random-cultural/index.svelte-48ca7da5.js",
     "src": "src/routes/random-cultural/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -345,7 +345,7 @@
     ]
   },
   "src/routes/random-restaurant/index.svelte": {
-    "file": "pages/random-restaurant/index.svelte-d27d6a19.js",
+    "file": "pages/random-restaurant/index.svelte-57e6042e.js",
     "src": "src/routes/random-restaurant/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -360,7 +360,7 @@
     ]
   },
   "src/routes/random-string/index.svelte": {
-    "file": "pages/random-string/index.svelte-0df16233.js",
+    "file": "pages/random-string/index.svelte-9e790df6.js",
     "src": "src/routes/random-string/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -375,7 +375,7 @@
     ]
   },
   "src/routes/real-estate-rental-yield/index.svelte": {
-    "file": "pages/real-estate-rental-yield/index.svelte-1bda6df3.js",
+    "file": "pages/real-estate-rental-yield/index.svelte-95ed1453.js",
     "src": "src/routes/real-estate-rental-yield/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
